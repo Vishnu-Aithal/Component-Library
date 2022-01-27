@@ -1,0 +1,46 @@
+/* Heading */
+
+.heading-large {
+  font-size: 3rem;
+  line-height: 2.5rem;
+}
+
+.heading-medium {
+  font-size: 2rem;
+  line-height: 1.5rem;
+}
+
+.heading-small {
+  font-size: 1.5rem;
+  line-height: 1rem;
+}
+
+/* text-size */
+
+.text-large {
+  font-size: 1.5rem;
+}
+
+.text-small {
+  font-size: 0.7rem;
+}
+
+/* text-color */
+
+.text-gray {
+  color: #94a3b8;
+}
+
+/* font-weight */
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-semi-bold {
+  font-weight: 600;
+}
+
+.text-light {
+  font-weight: 300;
+}
