@@ -1,0 +1,15 @@
+.shadow-xs {
+  box-shadow: 0.5px 0.5px 0.5px lightgray;
+}
+
+.shadow-small {
+  box-shadow: 1px 1px 1px lightgray;
+}
+
+.shadow-medium {
+  box-shadow: 2px 2px 2px lightgray;
+}
+
+.shadow-large {
+  box-shadow: 3px 3px 3px lightgray;
+}
