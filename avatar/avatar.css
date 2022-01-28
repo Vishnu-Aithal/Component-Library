@@ -1,0 +1,41 @@
+@import url(/utitlities/utilities.css);
+
+
+
+.avatar {
+  border-radius: 999px;
+  overflow: hidden;
+  max-width: 10rem;
+  max-height: 10rem;
+}
+
+.avatar img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.avatar.avatar-xs {
+  height: 2rem;
+  width: 2rem;
+}
+
+.avatar.avatar-sm {
+  height: 3rem;
+  width: 3rem;
+}
+
+.avatar.avatar-md {
+  height: 4rem;
+  width: 4rem;
+}
+
+.avatar.avatar-lg {
+  height: 6rem;
+  width: 6rem;
+}
+
+.avatar.avatar-xl {
+  height: 8rem;
+  width: 8rem;
+}
