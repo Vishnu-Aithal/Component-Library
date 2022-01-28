@@ -1,3 +1,12 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Lato:wght@300;400;700;900&family=Montserrat:wght@300;400;700;900&family=Roboto:wght@300;400;700;900&family=Ubuntu:wght@300;400;700&display=swap');
+/*
+font-family: 'Dongle', sans-serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Ubuntu', sans-serif; 
+*/
 /* Heading */
 
 .heading-large {
@@ -43,4 +52,22 @@
 
 .text-light {
   font-weight: 300;
+}
+
+/* text-align */
+
+.text-center {
+  text-align: center;
+}
+
+.text-start {
+  text-align: start;
+}
+
+.text-end {
+  text-align: end;
+}
+
+.text-just {
+  text-align: justify;
 }
