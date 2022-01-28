@@ -5,6 +5,8 @@
   padding: 0.5rem;
   background-color: inherit;
   border-radius: 0.25rem;
+  color: inherit;
+  transition: all 250ms ease;
 }
 
 .btn:hover {
