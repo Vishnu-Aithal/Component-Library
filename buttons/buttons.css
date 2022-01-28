@@ -1,0 +1,60 @@
+@import url(/utitlities/utilities.css);
+
+:root {
+  --primary-color: #2563eb;
+  --danger-color: ##dc2626;
+  --warning-color: #facc15;
+  --light-gray: #e5e7eb;
+  --blue-color: #2563eb;
+}
+
+.btn {
+  border: none;
+  background-color: inherit;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.btn:hover {
+  background-color: var(--light-gray);
+}
+
+
+.btn.btn-lg {
+  padding: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.btn.btn-primary {
+  background-color: var(--primary-color);
+}
+
+.btn.btn-primary:hover {
+  background-color: var(--primary-color-light);
+}
+
+.btn.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--secondary-text);
+}
+
+.btn.btn-secondary:hover {
+  background-color: var(--secondary-color-light);
+}
+
+.btn.btn-outline-primary {
+  border: solid 2px var(--primary-color)
+}
+
+.btn.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+}
+
+.btn.btn-outline-secondary {
+  border: solid 2px var(--secondary-color)
+}
+
+.btn.btn.btn-outline-secondary:hover {
+  background-color: var(--secondary-color);
+  color: var(--secondary-text);
+}
