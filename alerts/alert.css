@@ -1,0 +1,30 @@
+@import url(/utitlities/utilities.css);
+
+.alert {
+  display: flex;
+  width: 600px;
+  max-width: 90%;
+  color: var(--text-white);
+}
+
+.alert.alert-primary {
+  background-color: var(--primary-color);
+
+}
+
+.alert.alert-danger {
+  background-color: var(--danger-color)
+}
+
+.alert.alert-warning {
+  background-color: var(--warning-color);
+}
+
+.alert .alert-dismiss {
+  cursor: pointer;
+  user-select: none;
+}
+
+.alert .alert-link {
+  color: var(--text-white);
+}
