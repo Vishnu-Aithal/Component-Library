@@ -3,8 +3,6 @@
 
 
 .avatar {
-  border-radius: 999px;
-  overflow: hidden;
   max-width: 10rem;
   max-height: 10rem;
   position: relative;
@@ -13,6 +11,7 @@
 .avatar img {
   object-fit: cover;
   object-position: center;
+  border-radius: inherit;
   width: 100%;
 }
 
