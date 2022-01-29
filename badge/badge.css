@@ -1,0 +1,165 @@
+@import url(/utitlities/utilities.css);
+
+/* button-with badges */
+
+[class*="badge"] {
+  user-select: none;
+}
+
+.button-with-badge {
+  display: grid;
+  width: max-content;
+}
+
+.button-with-badge .notif-primary {
+  background-color: var(--primary-color-light);
+}
+
+.button-with-badge .notif-secondary {
+  background-color: var(--secondary-color-light);
+}
+
+
+.button-with-badge .badge-btn {
+  grid-column: 2/7;
+  grid-row: 2/7;
+}
+
+.button-with-badge .badge-bottom-right {
+  grid-column: 6/8;
+  grid-row: 6/8;
+}
+
+.button-with-badge .badge-bottom-left {
+  grid-column: 1/3;
+  grid-row: 6/8;
+}
+
+.button-with-badge .badge-top-right {
+  grid-column: 6/8;
+  grid-row: 1/3;
+}
+
+.button-with-badge .badge-top-left {
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+
+/* avatar with badges */
+
+.avatar-with-badge,
+.icon-with-badge {
+  position: relative;
+  width: min-content;
+}
+
+.avatar-with-badge .online {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: green;
+  border-radius: 999px;
+  border: solid 1px gray
+}
+
+.avatar-with-badge .offline {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: red;
+  border-radius: 999px;
+  border: solid 1px gray
+}
+
+.avatar-with-badge .away {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: yellow;
+  border-radius: 999px;
+  border: solid 1px gray
+}
+
+.avatar-with-badge .notif,
+.icon-with-badge .notif {
+  background-color: var(--primary-color-light);
+}
+
+.avatar-with-badge .badge-bottom-right,
+.icon-with-badge .badge-bottom-right {
+  position: absolute;
+  bottom: 4%;
+  right: 8%;
+}
+
+.avatar-with-badge .badge-bottom-left,
+.icon-with-badge .badge-bottom-left {
+  position: absolute;
+  bottom: 4%;
+  left: 8%;
+}
+
+.avatar-with-badge .badge-top-right,
+.icon-with-badge .badge-top-right {
+  position: absolute;
+  top: 4%;
+  right: 8%;
+}
+
+.avatar-with-badge .badge-top-left,
+.icon-with-badge .badge-top-left {
+  position: absolute;
+  top: 4%;
+  left: 8%;
+}
+
+
+
+/* ignore  */
+
+.avatar {
+  border-radius: 999px;
+  overflow: hidden;
+  max-width: 10rem;
+  max-height: 10rem;
+}
+
+.avatar img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.avatar.avatar-md {
+  height: 4rem;
+  width: 4rem;
+}
+
+.btn {
+  border: none;
+  padding: 0.5rem;
+  background-color: inherit;
+  border-radius: 0.25rem;
+  color: inherit;
+  transition: all 250ms ease;
+}
+
+.btn:hover {
+  background-color: var(--light-gray);
+}
+
+.btn.btn-lg {
+  padding: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.btn.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-white);
+}
+
+.btn.btn-primary:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.btn.btn-icon {
+  min-width: 2rem;
+  border-radius: 999px;
+}
