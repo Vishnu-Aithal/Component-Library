@@ -6,108 +6,110 @@
   user-select: none;
 }
 
-.button-with-badge {
-  display: grid;
+.badge-btn {
+  position: relative;
   width: max-content;
 }
 
-.button-with-badge .notif-primary {
+.badge-btn .notif-primary {
   background-color: var(--primary-color-light);
 }
 
-.button-with-badge .notif-secondary {
+.badge-btn .notif-secondary {
   background-color: var(--secondary-color-light);
 }
 
 
-.button-with-badge .badge-btn {
-  grid-column: 2/7;
-  grid-row: 2/7;
+.badge-btn .badge-bottom-right {
+  position: absolute;
+  bottom: -15%;
+  right: -15%;
 }
 
-.button-with-badge .badge-bottom-right {
-  grid-column: 6/8;
-  grid-row: 6/8;
+.badge-btn .badge-bottom-left {
+  position: absolute;
+  bottom: -15%;
+  left: -15%;
 }
 
-.button-with-badge .badge-bottom-left {
-  grid-column: 1/3;
-  grid-row: 6/8;
+.badge-btn .badge-top-right {
+  position: absolute;
+  top: -15%;
+  right: -15%;
 }
 
-.button-with-badge .badge-top-right {
-  grid-column: 6/8;
-  grid-row: 1/3;
-}
-
-.button-with-badge .badge-top-left {
-  grid-column: 1/3;
-  grid-row: 1/3;
+.badge-btn .badge-top-left {
+  position: absolute;
+  top: -15%;
+  left: -15%;
 }
 
 /* avatar with badges */
 
-.avatar-with-badge,
-.icon-with-badge {
+.badge-avatar,
+.badge-icon {
   position: relative;
-  width: min-content;
 }
 
-.avatar-with-badge .online {
+.badge-avatar .online {
   width: 0.75rem;
   height: 0.75rem;
-  background-color: green;
+  background-color: var(--green-color);
   border-radius: 999px;
-  border: solid 1px gray
+  border: solid 1px var(--text-white)
 }
 
-.avatar-with-badge .offline {
+.badge-avatar .offline {
   width: 0.75rem;
   height: 0.75rem;
-  background-color: red;
+  background-color: var(--red-color);
   border-radius: 999px;
-  border: solid 1px gray
+  border: solid 1px var(--text-white)
 }
 
-.avatar-with-badge .away {
+.badge-avatar .away {
   width: 0.75rem;
   height: 0.75rem;
-  background-color: yellow;
+  background-color: var(--yellow-color);
   border-radius: 999px;
-  border: solid 1px gray
+  border: solid 1px var(--text-white)
 }
 
-.avatar-with-badge .notif,
-.icon-with-badge .notif {
+.badge-avatar .notif {
+  background-color: var(--primary-color-light);
+  border: solid 1px var(--text-white)
+}
+
+.badge-icon .notif {
   background-color: var(--primary-color-light);
 }
 
-.avatar-with-badge .badge-bottom-right,
-.icon-with-badge .badge-bottom-right {
+.badge-avatar .badge-bottom-right,
+.badge-icon .badge-bottom-right {
   position: absolute;
-  bottom: 4%;
-  right: 8%;
+  bottom: -5%;
+  right: -5%;
 }
 
-.avatar-with-badge .badge-bottom-left,
-.icon-with-badge .badge-bottom-left {
+.badge-avatar .badge-bottom-left,
+.badge-icon .badge-bottom-left {
   position: absolute;
-  bottom: 4%;
-  left: 8%;
+  bottom: -5%;
+  left: -5%;
 }
 
-.avatar-with-badge .badge-top-right,
-.icon-with-badge .badge-top-right {
+.badge-avatar .badge-top-right,
+.badge-icon .badge-top-right {
   position: absolute;
-  top: 4%;
-  right: 8%;
+  top: -5%;
+  right: -5%;
 }
 
-.avatar-with-badge .badge-top-left,
-.icon-with-badge .badge-top-left {
+.badge-avatar .badge-top-left,
+.badge-icon .badge-top-left {
   position: absolute;
-  top: 4%;
-  left: 8%;
+  top: -5%;
+  left: -5%;
 }
 
 
@@ -115,8 +117,7 @@
 /* ignore  */
 
 .avatar {
-  border-radius: 999px;
-  overflow: hidden;
+  /* overflow: hidden; */
   max-width: 10rem;
   max-height: 10rem;
 }
@@ -124,6 +125,7 @@
 .avatar img {
   object-fit: cover;
   object-position: center;
+  border-radius: inherit;
   width: 100%;
 }
 
