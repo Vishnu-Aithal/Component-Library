@@ -1,0 +1,99 @@
+@import url(/utitlities/utilities.css);
+
+.btn {
+  border: none;
+  padding: 0.5rem;
+  background-color: inherit;
+  border-radius: 0.25rem;
+  color: inherit;
+  transition: all 250ms ease;
+}
+
+.btn:hover {
+  background-color: var(--light-gray);
+}
+
+.btn:disabled {
+  background-color: var(--off-white);
+  color: gray;
+  box-shadow: none;
+}
+
+.btn.btn-lg {
+  padding: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.btn.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-white);
+}
+
+.btn.btn-primary:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.btn.btn-primary:disabled {
+  background-color: var(--primary-color-light);
+}
+
+.btn.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--text-white);
+}
+
+.btn.btn-secondary:hover {
+  background-color: var(--secondary-color-dark);
+}
+
+.btn.btn-secondary:disabled {
+  background-color: var(--secondary-color-light);
+}
+
+.btn.btn-outline-primary {
+  border: solid 2px var(--primary-color);
+}
+
+.btn.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  color: var(--text-white);
+}
+
+.btn.btn-outline-primary:disabled {
+  background-color: var(--off-white);
+  border-color: var(--primary-color-light);
+  color: gray;
+}
+
+.btn.btn-outline-secondary {
+  border: solid 2px var(--secondary-color);
+}
+
+.btn.btn-outline-secondary:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-white);
+}
+
+.btn.btn-outline-secondary:disabled {
+  border-color: var(--secondary-color-light);
+  background-color: var(--off-white);
+  color: gray;
+}
+
+.btn.btn-icon {
+  min-width: 2rem;
+  border-radius: 999px;
+}
+
+.btn.btn-icon-lg {
+  min-width: 3rem;
+  border-radius: 999px;
+  font-size: 1.25rem;
+  padding: 0.75rem;
+}
+
+/* ignore */
+
+.container-white {
+  background-color: #f8fafc;
+}
