@@ -5,10 +5,25 @@
   width: 600px;
   max-width: 90%;
   color: var(--text-white);
+  transition: all ease 0.2s;
 }
 
 .alert.alert-primary {
   background-color: var(--primary-color);
+}
+
+.alert.alert-secondary {
+  background-color: var(--secondary-color);
+}
+
+.alert.alert-outline-primary {
+  color: var(--text-black);
+  border: solid 2px var(--primary-color);
+}
+
+.alert.alert-outline-secondary {
+  color: var(--text-black);
+  border: solid 2px var(--secondary-color);
 }
 
 .alert.alert-danger {
