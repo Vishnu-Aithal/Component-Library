@@ -16,6 +16,7 @@
 .btn:disabled {
   background-color: var(--off-white);
   color: gray;
+  box-shadow: none;
 }
 
 .btn.btn-lg {
