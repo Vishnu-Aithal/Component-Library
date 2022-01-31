@@ -7,59 +7,14 @@
   height: auto;
 }
 
-
-
-.img-round-s {
-  object-fit: cover;
-  max-width: 100%;
-  width: 10rem;
-  height: 10rem;
-  border-radius: 100%;
+.ar-1-1 {
+  aspect-ratio: 1/1;
 }
 
-.img-round-m {
-  object-fit: cover;
-  max-width: 100%;
-  width: 20rem;
-  height: 20rem;
-  border-radius: 100%;
+.ar-4-3 {
+  aspect-ratio: 4/3;
 }
 
-.img-round-l {
-  object-fit: cover;
-  max-width: 100%;
-  width: 30rem;
-  height: 30rem;
-  border-radius: 100%;
-}
-
-.fixed-ratio-container {
-  position: relative;
-  max-width: 100%;
-}
-
-.fixed-ratio-container .img-responsive {
-  position: absolute;
-  object-position: center;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-.fixed-ratio-container::after {
-  width: 100%;
-  content: "";
-  display: block;
-}
-
-.fixed-ratio-container.one-one::after {
-  padding-bottom: 100%;
-}
-
-.fixed-ratio-container.four-three::after {
-  padding-bottom: 75%;
-}
-
-.fixed-ratio-container.sixteen-nine::after {
-  padding-bottom: 56.25%;
+.ar-16-9 {
+  aspect-ratio: 16/9;
 }
