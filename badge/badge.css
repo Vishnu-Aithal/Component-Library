@@ -1,0 +1,167 @@
+@import url(/utitlities/utilities.css);
+
+/* button-with badges */
+
+[class*="badge"] {
+  user-select: none;
+}
+
+.badge-btn {
+  position: relative;
+  width: max-content;
+}
+
+.badge-btn .notif-primary {
+  background-color: var(--primary-color-light);
+}
+
+.badge-btn .notif-secondary {
+  background-color: var(--secondary-color-light);
+}
+
+
+.badge-btn .badge-bottom-right {
+  position: absolute;
+  bottom: -15%;
+  right: -15%;
+}
+
+.badge-btn .badge-bottom-left {
+  position: absolute;
+  bottom: -15%;
+  left: -15%;
+}
+
+.badge-btn .badge-top-right {
+  position: absolute;
+  top: -15%;
+  right: -15%;
+}
+
+.badge-btn .badge-top-left {
+  position: absolute;
+  top: -15%;
+  left: -15%;
+}
+
+/* avatar with badges */
+
+.badge-avatar,
+.badge-icon {
+  position: relative;
+}
+
+.badge-avatar .online {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: var(--green-color);
+  border-radius: 999px;
+  border: solid 1px var(--text-white)
+}
+
+.badge-avatar .offline {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: var(--red-color);
+  border-radius: 999px;
+  border: solid 1px var(--text-white)
+}
+
+.badge-avatar .away {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: var(--yellow-color);
+  border-radius: 999px;
+  border: solid 1px var(--text-white)
+}
+
+.badge-avatar .notif {
+  background-color: var(--primary-color-light);
+  border: solid 1px var(--text-white)
+}
+
+.badge-icon .notif {
+  background-color: var(--primary-color-light);
+}
+
+.badge-avatar .badge-bottom-right,
+.badge-icon .badge-bottom-right {
+  position: absolute;
+  bottom: -5%;
+  right: -5%;
+}
+
+.badge-avatar .badge-bottom-left,
+.badge-icon .badge-bottom-left {
+  position: absolute;
+  bottom: -5%;
+  left: -5%;
+}
+
+.badge-avatar .badge-top-right,
+.badge-icon .badge-top-right {
+  position: absolute;
+  top: -5%;
+  right: -5%;
+}
+
+.badge-avatar .badge-top-left,
+.badge-icon .badge-top-left {
+  position: absolute;
+  top: -5%;
+  left: -5%;
+}
+
+
+
+/* ignore  */
+
+.avatar {
+  /* overflow: hidden; */
+  max-width: 10rem;
+  max-height: 10rem;
+}
+
+.avatar img {
+  object-fit: cover;
+  object-position: center;
+  border-radius: inherit;
+  width: 100%;
+}
+
+.avatar.avatar-md {
+  height: 4rem;
+  width: 4rem;
+}
+
+.btn {
+  border: none;
+  padding: 0.5rem;
+  background-color: inherit;
+  border-radius: 0.25rem;
+  color: inherit;
+  transition: all 250ms ease;
+}
+
+.btn:hover {
+  background-color: var(--light-gray);
+}
+
+.btn.btn-lg {
+  padding: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.btn.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-white);
+}
+
+.btn.btn-primary:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.btn.btn-icon {
+  min-width: 2rem;
+  border-radius: 999px;
+}
