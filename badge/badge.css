@@ -1,9 +1,14 @@
 @import url(/utitlities/utilities.css);
+@import url(/buttons/button.css);
+@import url(/avatar/avatar.css);
+
 
 /* button-with badges */
 
 [class*="badge"] {
   user-select: none;
+  line-height: unset;
+  text-align: center;
 }
 
 .badge-btn {
@@ -76,11 +81,11 @@
 }
 
 .badge-avatar .notif {
-  background-color: var(--color-primary-light);
   border: solid 1px var(--color-text-white)
 }
 
-.badge-icon .notif {
+.badge-icon .notif,
+.badge-avatar .notif {
   background-color: var(--color-primary-light);
 }
 
@@ -110,58 +115,4 @@
   position: absolute;
   top: -5%;
   left: -5%;
-}
-
-
-
-/* ignore  */
-
-.avatar {
-  /* overflow: hidden; */
-  max-width: 10rem;
-  max-height: 10rem;
-}
-
-.avatar img {
-  object-fit: cover;
-  object-position: center;
-  border-radius: inherit;
-  width: 100%;
-}
-
-.avatar.avatar-md {
-  height: 4rem;
-  width: 4rem;
-}
-
-.btn {
-  border: none;
-  padding: 0.5rem;
-  background-color: inherit;
-  border-radius: 0.25rem;
-  color: inherit;
-  transition: all 250ms ease;
-}
-
-.btn:hover {
-  background-color: var(--color-light-gray);
-}
-
-.btn.btn-lg {
-  padding: 0.75rem;
-  font-size: 1.25rem;
-}
-
-.btn.btn-primary {
-  background-color: var(--color-primary);
-  color: var(--color-text-white);
-}
-
-.btn.btn-primary:hover {
-  background-color: var(--color-primary-dark);
-}
-
-.btn.btn-icon {
-  min-width: 2rem;
-  border-radius: 999px;
 }
