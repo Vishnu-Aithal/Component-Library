@@ -1,0 +1,67 @@
+@import url(/utitlities/utilities.css);
+
+
+
+.avatar {
+  max-width: 10rem;
+  max-height: 10rem;
+  position: relative;
+}
+
+.avatar img {
+  object-fit: cover;
+  object-position: center;
+  border-radius: inherit;
+  width: 100%;
+}
+
+.avatar.avatar-text-only {
+  background-color: var(--primary-color-light);
+}
+
+.avatar.avatar-text-onhover:hover img {
+  opacity: 0.7;
+}
+
+.avatar.avatar-text-onhover:hover .avatar-text {
+  display: block;
+}
+
+.avatar .avatar-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text-black);
+  user-select: none;
+  z-index: 2;
+}
+
+.avatar.avatar-text-onhover .avatar-text {
+  display: none;
+}
+
+.avatar.avatar-xs {
+  height: 2rem;
+  width: 2rem;
+}
+
+.avatar.avatar-sm {
+  height: 3rem;
+  width: 3rem;
+}
+
+.avatar.avatar-md {
+  height: 4rem;
+  width: 4rem;
+}
+
+.avatar.avatar-lg {
+  height: 6rem;
+  width: 6rem;
+}
+
+.avatar.avatar-xl {
+  height: 8rem;
+  width: 8rem;
+}
