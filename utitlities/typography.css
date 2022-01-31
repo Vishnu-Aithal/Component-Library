@@ -9,29 +9,41 @@ font-family: 'Ubuntu', sans-serif;
 */
 /* Heading */
 
-.heading-large {
+.heading-lg {
   font-size: 3rem;
+  line-height: 4rem;
+}
+
+.heading-md {
+  font-size: 2rem;
   line-height: 2.5rem;
 }
 
-.heading-medium {
-  font-size: 2rem;
-  line-height: 1.5rem;
-}
-
-.heading-small {
+.heading-sm {
   font-size: 1.5rem;
-  line-height: 1rem;
+  line-height: 2rem;
 }
 
 /* text-size */
 
-.text-large {
+.text-lg {
   font-size: 1.5rem;
+  line-height: 2rem;
 }
 
-.text-small {
+.text-md {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-sm {
   font-size: 0.7rem;
+  line-height: 1.25rem;
+}
+
+.text-xs {
+  font-size: 0.5rem;
+  line-height: 1rem;
 }
 
 /* text-color */
@@ -40,7 +52,26 @@ font-family: 'Ubuntu', sans-serif;
   color: #94a3b8;
 }
 
+.text-black {
+  color: var(--color-text-black);
+}
+
+.text-white {
+  color: var(--color-text-white)
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
 /* font-weight */
+.text-black {
+  font-weight: 900;
+}
 
 .text-bold {
   font-weight: 700;
@@ -48,6 +79,10 @@ font-family: 'Ubuntu', sans-serif;
 
 .text-semi-bold {
   font-weight: 600;
+}
+
+.text-regular {
+  font-weight: 400;
 }
 
 .text-light {
