@@ -12,11 +12,11 @@
 }
 
 .badge-btn .notif-primary {
-  background-color: var(--primary-color-light);
+  background-color: var(--color-primary-light);
 }
 
 .badge-btn .notif-secondary {
-  background-color: var(--secondary-color-light);
+  background-color: var(--color-secondary-light);
 }
 
 
@@ -54,34 +54,34 @@
 .badge-avatar .online {
   width: 0.75rem;
   height: 0.75rem;
-  background-color: var(--green-color);
+  background-color: var(--color-green);
   border-radius: 999px;
-  border: solid 1px var(--text-white)
+  border: solid 1px var(--color-text-white)
 }
 
 .badge-avatar .offline {
   width: 0.75rem;
   height: 0.75rem;
-  background-color: var(--red-color);
+  background-color: var(--color-red);
   border-radius: 999px;
-  border: solid 1px var(--text-white)
+  border: solid 1px var(--color-text-white)
 }
 
 .badge-avatar .away {
   width: 0.75rem;
   height: 0.75rem;
-  background-color: var(--yellow-color);
+  background-color: var(--color-yellow);
   border-radius: 999px;
-  border: solid 1px var(--text-white)
+  border: solid 1px var(--color-text-white)
 }
 
 .badge-avatar .notif {
-  background-color: var(--primary-color-light);
-  border: solid 1px var(--text-white)
+  background-color: var(--color-primary-light);
+  border: solid 1px var(--color-text-white)
 }
 
 .badge-icon .notif {
-  background-color: var(--primary-color-light);
+  background-color: var(--color-primary-light);
 }
 
 .badge-avatar .badge-bottom-right,
@@ -144,7 +144,7 @@
 }
 
 .btn:hover {
-  background-color: var(--light-gray);
+  background-color: var(--color-light-gray);
 }
 
 .btn.btn-lg {
@@ -153,12 +153,12 @@
 }
 
 .btn.btn-primary {
-  background-color: var(--primary-color);
-  color: var(--text-white);
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
 }
 
 .btn.btn-primary:hover {
-  background-color: var(--primary-color-dark);
+  background-color: var(--color-primary-dark);
 }
 
 .btn.btn-icon {

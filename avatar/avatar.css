@@ -16,7 +16,7 @@
 }
 
 .avatar.avatar-text-only {
-  background-color: var(--primary-color-light);
+  background-color: var(--color-primary-light);
 }
 
 .avatar.avatar-text-onhover:hover img {
@@ -32,7 +32,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: var(--text-black);
+  color: var(--color-text-black);
   user-select: none;
   z-index: 2;
 }
