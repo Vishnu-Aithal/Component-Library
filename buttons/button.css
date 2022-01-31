@@ -92,8 +92,26 @@
   padding: 0.75rem;
 }
 
-/* ignore */
+.btn-link {
+  text-decoration: none;
+  padding: 0;
+  background-color: none;
+}
 
-.container-white {
-  background-color: #f8fafc;
+.btn-link:hover {
+  background-color: initial;
+}
+
+.btn-link-primary {
+  color: var(--color-primary);
+}
+
+.btn-link-secondary {
+  color: var(--color-secondary);
+}
+
+.link-disabled {
+  pointer-events: none;
+  cursor: default;
+  color: gray;
 }
