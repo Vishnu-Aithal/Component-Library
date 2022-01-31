@@ -2,6 +2,7 @@
 
 .img-responsive {
   object-fit: cover;
+  object-position: center;
   width: 100%;
   height: auto;
 }
@@ -32,26 +33,33 @@
   border-radius: 100%;
 }
 
-.img-fixed-ratio {
+.fixed-ratio-container {
   position: relative;
   max-width: 100%;
 }
 
-.img-fixed-ratio .img-responsive {
+.fixed-ratio-container .img-responsive {
   position: absolute;
+  object-position: center;
   height: 100%;
   top: 0;
   left: 0;
 }
 
-.img-fixed-ratio.one-one .ratio-maintainer {
+.fixed-ratio-container::after {
+  width: 100%;
+  content: "";
+  display: block;
+}
+
+.fixed-ratio-container.one-one::after {
   padding-bottom: 100%;
 }
 
-.img-fixed-ratio.four-three .ratio-maintainer {
+.fixed-ratio-container.four-three::after {
   padding-bottom: 75%;
 }
 
-.img-fixed-ratio.sixteen-nine .ratio-maintainer {
+.fixed-ratio-container.sixteen-nine::after {
   padding-bottom: 56.25%;
 }
