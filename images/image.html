@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="image.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container-lg p-3 shadow-large">
+    <h2 class="mb-2">Responsive Image</h2>
+    <img class="img-responsive" src="image-demo.jpg" alt="Roads">
+  </div>
+  <div class="container-lg p-3 shadow-large">
+    <h2 class="mb-2">Round Image 3 sizes</h2>
+    <img class="img-round-s" src="image-demo.jpg" alt="Roads">
+    <img class="img-round-m" src="image-demo.jpg" alt="Roads">
+    <img class="img-round-l" src="image-demo.jpg" alt="Roads">
+  </div>
+
+  <div class="container-lg p-3 shadow-large">
+    <h2 class="mb-2">Fixed Aspect Ratio - 1:1</h2>
+    <div class="img-fixed-ratio one-one m-4">
+      <div class="ratio-maintainer"></div>
+      <img class="img-responsive" src="image-demo.jpg" alt="Roads">
+    </div>
+
+    <h2 class="mb-2">Fixed Aspect Ratio - 4:3</h2>
+    <div class="img-fixed-ratio four-three m-4">
+      <div class="ratio-maintainer"></div>
+      <img class="img-responsive" src="image-demo.jpg" alt="Roads">
+    </div>
+
+    <h2 class="mb-2">Fixed Aspect Ratio - 16:9</h2>
+    <div class="img-fixed-ratio sixteen-nine m-4">
+      <div class="ratio-maintainer"></div>
+      <img class="img-responsive" src="image-demo.jpg" alt="Roads">
+    </div>
+
+  </div>
+
+
+
+</body>
+
+</html>

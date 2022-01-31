@@ -1,0 +1,57 @@
+@import url(/utitlities/utilities.css);
+
+.img-responsive {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+
+
+.img-round-s {
+  object-fit: cover;
+  max-width: 100%;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100%;
+}
+
+.img-round-m {
+  object-fit: cover;
+  max-width: 100%;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 100%;
+}
+
+.img-round-l {
+  object-fit: cover;
+  max-width: 100%;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 100%;
+}
+
+.img-fixed-ratio {
+  position: relative;
+  max-width: 100%;
+}
+
+.img-fixed-ratio .img-responsive {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.img-fixed-ratio.one-one .ratio-maintainer {
+  padding-bottom: 100%;
+}
+
+.img-fixed-ratio.four-three .ratio-maintainer {
+  padding-bottom: 75%;
+}
+
+.img-fixed-ratio.sixteen-nine .ratio-maintainer {
+  padding-bottom: 56.25%;
+}
