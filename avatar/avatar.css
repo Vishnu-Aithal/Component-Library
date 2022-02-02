@@ -1,11 +1,11 @@
 @import url(/utitlities/utilities.css);
 
-
-
 .avatar {
   max-width: 10rem;
   max-height: 10rem;
   position: relative;
+  cursor: pointer;
+  display: inline-block;
 }
 
 .avatar img {
@@ -13,6 +13,8 @@
   object-position: center;
   border-radius: inherit;
   width: 100%;
+  pointer-events: none;
+  position: absolute;
 }
 
 .avatar.avatar-text-only {
@@ -35,6 +37,7 @@
   color: var(--color-text-black);
   user-select: none;
   z-index: 2;
+  pointer-events: none;
 }
 
 .avatar.avatar-text-onhover .avatar-text {
