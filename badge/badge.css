@@ -5,7 +5,7 @@
 
 /* button-with badges */
 
-[class*="badge"] {
+span[class*="badge"] {
   user-select: none;
   line-height: unset;
   text-align: center;
