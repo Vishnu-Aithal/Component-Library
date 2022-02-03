@@ -1,0 +1,75 @@
+@import url(/utitlities/utilities.css);
+@import url(/buttons/button.css);
+@import url(/images/image.css);
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  max-width: 95%;
+  position: relative;
+}
+
+.card-img img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-hz-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100px;
+}
+
+.card-hz-wrapper .card-img {
+  flex-shrink: 1;
+  flex-basis: 40%;
+}
+
+.card-overlay {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  user-select: none;
+  background-color: white;
+}
+
+.card:hover .card-overlay {
+  display: flex;
+}
+
+.card-badge {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translate(-10%, -10%);
+  user-select: none;
+}
+
+.card-dismiss {
+  position: absolute;
+  top: 0%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+  cursor: pointer;
+}
