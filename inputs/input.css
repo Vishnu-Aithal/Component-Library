@@ -40,3 +40,28 @@
   opacity: 1;
   transform: translate(2%, -100%);
 }
+
+.input-text input:valid {
+  border-color: green;
+}
+
+.input-text input:invalid ~ .invalid-indicator {
+  position: relative;
+}
+
+.input-text input:required:placeholder-shown ~ .invalid-indicator:before {
+  position: absolute;
+  content: "Required*";
+  font-size: 0.5rem;
+  top: -5px;
+  right: 1.25rem;
+}
+
+/* .input-text input:invalid ~ .invalid-indicator:after {
+  content: "✖";
+  color: red;
+} */
+.input-text input:valid ~ .invalid-indicator:after {
+  content: "✓";
+  color: green;
+}
