@@ -2,7 +2,6 @@
 @import url(/buttons/button.css);
 @import url(/avatar/avatar.css);
 
-
 /* button-with badges */
 
 span[class*="badge"] {
@@ -23,7 +22,6 @@ span[class*="badge"] {
 .badge-btn .notif-secondary {
   background-color: var(--color-secondary-light);
 }
-
 
 .badge-btn .badge-bottom-right {
   position: absolute;
@@ -61,7 +59,7 @@ span[class*="badge"] {
   height: 0.75rem;
   background-color: var(--color-green);
   border-radius: 999px;
-  border: solid 1px var(--color-text-white)
+  border: solid 1px var(--color-text-white);
 }
 
 .badge-avatar .offline {
@@ -69,7 +67,7 @@ span[class*="badge"] {
   height: 0.75rem;
   background-color: var(--color-red);
   border-radius: 999px;
-  border: solid 1px var(--color-text-white)
+  border: solid 1px var(--color-text-white);
 }
 
 .badge-avatar .away {
@@ -77,11 +75,11 @@ span[class*="badge"] {
   height: 0.75rem;
   background-color: var(--color-yellow);
   border-radius: 999px;
-  border: solid 1px var(--color-text-white)
+  border: solid 1px var(--color-text-white);
 }
 
 .badge-avatar .notif {
-  border: solid 1px var(--color-text-white)
+  border: solid 1px var(--color-text-white);
 }
 
 .badge-icon .notif,
