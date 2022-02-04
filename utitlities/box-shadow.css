@@ -1,50 +1,49 @@
 /* box-shadows */
 
 .shadow-xs {
-  box-shadow: 1px 1px 1px lightgray;
+  box-shadow: 1px 1px 1px #00000033;
 }
 
 .shadow-sm {
-  box-shadow: 2px 2px 2px lightgray;
+  box-shadow: 2px 2px 2px #00000033;
 }
 
 .shadow-md {
-  box-shadow: 3px 3px 3px lightgray;
+  box-shadow: 3px 3px 3px #00000055;
 }
 
 .shadow-lg {
-  box-shadow: 4px 4px 4px lightgray;
+  box-shadow: 4px 4px 4px #00000033;
 }
 
 /* small shadow only on hover */
 
 .shadow-hover-only:hover {
-  box-shadow: 2px 2px 2px lightgray;
+  box-shadow: 2px 2px 2px #00000033;
 }
 
 /* shadow with larger shadow on hover */
 
 .shadow-xs-hover {
-  box-shadow: 1px 1px 1px lightgray;
+  box-shadow: 1px 1px 1px #00000033;
 }
 
 .shadow-xs-hover:hover {
-  box-shadow: 2px 2px 2px lightgray;
+  box-shadow: 2px 2px 2px #00000033;
 }
 
 .shadow-sm-hover {
-  box-shadow: 2px 2px 2px lightgray;
+  box-shadow: 2px 2px 2px #00000033;
 }
 
 .shadow-sm-hover:hover {
-  box-shadow: 3px 3px 3px lightgray;
+  box-shadow: 3px 3px 3px #00000033;
 }
 
 .shadow-md-hover {
-  box-shadow: 3px 3px 3px lightgray;
+  box-shadow: 3px 3px 3px #00000033;
 }
 
 .shadow-md-hover:hover {
-  box-shadow: 4px 4px 4px lightgray;
-
+  box-shadow: 4px 4px 4px #00000033;
 }
