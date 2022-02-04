@@ -108,3 +108,9 @@
   pointer-events: none;
   cursor: default;
 }
+
+.btn-float {
+  position: fixed;
+  top: 85vh;
+  left: 85vw;
+}
