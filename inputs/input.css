@@ -1,5 +1,11 @@
 @import url(/utitlities/utilities.css);
-@import url(/buttons/button.html);
+@import url(/buttons/button.css);
+
+.styled-form {
+  border: solid 1px var(--color-secondary);
+  padding: 2rem;
+  width: fit-content;
+}
 
 .input-text {
   position: relative;
@@ -11,7 +17,11 @@
   padding: 0.5rem;
 }
 
-.input-text .floating-label {
+.input-text input:focus {
+  outline-color: var(--color-primary-dark);
+}
+
+.input-text .float-label {
   padding: 0.1rem;
   position: absolute;
   top: 0.5rem;
@@ -25,43 +35,49 @@
   pointer-events: none;
 }
 
-.floating-label::before {
+.float-label::before {
   position: absolute;
   content: "";
-  height: 3px;
+  height: 4px;
   background-color: white;
   width: calc(100% + 0.2rem);
-  top: 50%;
+  top: 49%;
   left: -0.1rem;
   z-index: -1;
 }
 
-.input-text input:not(:placeholder-shown) + .floating-label {
+.input-text input:not(:placeholder-shown) + .float-label {
   opacity: 1;
   transform: translate(2%, -100%);
 }
 
-.input-text input:valid {
-  border-color: green;
-}
-
-.input-text input:invalid ~ .invalid-indicator {
+.input-text input ~ .required,
+.input-text input ~ .invalid {
   position: relative;
 }
 
-.input-text input:required:placeholder-shown ~ .invalid-indicator:before {
-  position: absolute;
-  content: "Required*";
-  font-size: 0.5rem;
-  top: -5px;
-  right: 1.25rem;
+.input-text input:required:placeholder-shown ~ .required:after {
+  position: relative;
+  color: red;
+  content: "*";
+  font-size: 0.75rem;
+  top: -0.5rem;
+  left: -1rem;
 }
 
-/* .input-text input:invalid ~ .invalid-indicator:after {
+.input-text input.valid {
+  border-color: var(--color-green);
+}
+.input-text input.invalid {
+  border-color: var(--color-green);
+}
+
+.input-text input.invalid ~ .invalid:after {
   content: "✖";
-  color: red;
-} */
-.input-text input:valid ~ .invalid-indicator:after {
+  color: var(--color-red);
+}
+
+.input-text input.valid ~ .invalid:after {
   content: "✓";
-  color: green;
+  color: var(--color-green);
 }
