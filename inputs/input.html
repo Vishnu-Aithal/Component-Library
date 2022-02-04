@@ -11,19 +11,19 @@
     <div class="container-lg p-4">
         <form action="" class="styled-form shadow-md-hover">
   
-        <div class="input-text">
-          <input type="text" name="name" placeholder="Enter Name" required>
+        <div class="input-group">
+          <input type="text" class="" name="name" placeholder="Enter Name" required>
           <label class="float-label" for="name">Name</label>
           <span class="invalid required"></span>
         </div>
   
-        <div class="input-text">
+        <div class="input-group">
           <input type="email" name="email" placeholder="Enter Email" required>
           <label class="float-label" for="email">Email</label>
           <span class="invalid required"></span>
         </div>
   
-        <div class="input-text">
+        <div class="input-group">
           <input type="password" name="password" placeholder="Enter New Password" minlength="8" required>
           <label class="float-label" for="password">Password</label>
           <span class="invalid required"></span>
@@ -31,6 +31,11 @@
 
         <button class="btn btn-outline-primary mt-2" type="submit">Sign Up</button>
         </form>
+
+        <div class="input-group mt-2">
+          <textarea name="feedback" id="" cols="30" rows="10" placeholder="Feedback"></textarea>
+          <label class="float-label" for="feedback">Feedback</label>
+        </div>
 
 
       </div>

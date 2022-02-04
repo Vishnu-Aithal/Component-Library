@@ -7,21 +7,25 @@
   width: fit-content;
 }
 
-.input-text {
+.input-group {
   position: relative;
   width: fit-content;
   margin-top: 0.5rem;
 }
 
-.input-text input {
+.input-group input,
+.input-group textarea {
+  max-width: 100%;
   padding: 0.5rem;
+  overflow-wrap: auto;
 }
 
-.input-text input:focus {
+.input-group input:focus,
+.input-group textarea:focus {
   outline-color: var(--color-primary-dark);
 }
 
-.input-text .float-label {
+.input-group .float-label {
   padding: 0.1rem;
   position: absolute;
   top: 0.5rem;
@@ -46,17 +50,18 @@
   z-index: -1;
 }
 
-.input-text input:not(:placeholder-shown) + .float-label {
+.input-group input:not(:placeholder-shown) + .float-label,
+.input-group textarea:not(:placeholder-shown) + .float-label {
   opacity: 1;
   transform: translate(2%, -100%);
 }
 
-.input-text input ~ .required,
-.input-text input ~ .invalid {
+.input-group input ~ .required,
+.input-group input ~ .invalid {
   position: relative;
 }
 
-.input-text input:required:placeholder-shown ~ .required:after {
+.input-group input:required:placeholder-shown ~ .required:after {
   position: relative;
   color: red;
   content: "*";
@@ -65,19 +70,19 @@
   left: -1rem;
 }
 
-.input-text input.valid {
+.input-group input.valid {
   border-color: var(--color-green);
 }
-.input-text input.invalid {
+.input-group input.invalid {
   border-color: var(--color-green);
 }
 
-.input-text input.invalid ~ .invalid:after {
+.input-group input.invalid ~ .invalid:after {
   content: "✖";
   color: var(--color-red);
 }
 
-.input-text input.valid ~ .invalid:after {
+.input-group input.valid ~ .invalid:after {
   content: "✓";
   color: var(--color-green);
 }
