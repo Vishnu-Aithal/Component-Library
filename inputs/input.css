@@ -17,7 +17,8 @@
 .input-group textarea {
   max-width: 100%;
   padding: 0.5rem;
-  overflow-wrap: auto;
+  border: solid 2px var(--color-primary-light);
+  border-radius: 0.25rem;
 }
 
 .input-group input:focus,
@@ -28,6 +29,8 @@
 .input-group .float-label {
   padding: 0.1rem;
   position: absolute;
+  max-width: calc(100% - 1.5rem);
+  overflow: hidden;
   top: 0.5rem;
   left: 0.5rem;
   z-index: 1;
@@ -37,6 +40,7 @@
   transition: transform 0.2s ease, opacity 0.2s ease;
   opacity: 0;
   pointer-events: none;
+  white-space: nowrap;
 }
 
 .float-label::before {
@@ -56,33 +60,18 @@
   transform: translate(2%, -100%);
 }
 
-.input-group input ~ .required,
-.input-group input ~ .invalid {
-  position: relative;
-}
-
 .input-group input:required:placeholder-shown ~ .required:after {
-  position: relative;
+  position: absolute;
   color: red;
   content: "*";
   font-size: 0.75rem;
-  top: -0.5rem;
-  left: -1rem;
+  right: 5px;
+  top: 4px;
 }
 
 .input-group input.valid {
-  border-color: var(--color-green);
+  border-bottom-color: var(--color-green);
 }
 .input-group input.invalid {
-  border-color: var(--color-green);
-}
-
-.input-group input.invalid ~ .invalid:after {
-  content: "✖";
-  color: var(--color-red);
-}
-
-.input-group input.valid ~ .invalid:after {
-  content: "✓";
-  color: var(--color-green);
+  border-bottom-color: var(--color-red);
 }

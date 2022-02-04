@@ -14,26 +14,26 @@
         <div class="input-group">
           <input type="text" class="" name="name" placeholder="Enter Name" required>
           <label class="float-label" for="name">Name</label>
-          <span class="invalid required"></span>
+          <span class="required"></span>
         </div>
   
         <div class="input-group">
-          <input type="email" name="email" placeholder="Enter Email" required>
+          <input class="invalid" type="email" name="email" id="email" placeholder="Enter Email" required>
           <label class="float-label" for="email">Email</label>
-          <span class="invalid required"></span>
+          <span class="required"></span>
         </div>
   
         <div class="input-group">
-          <input type="password" name="password" placeholder="Enter New Password" minlength="8" required>
+          <input class="valid" type="password" name="password" id="password" placeholder="Enter New Password" minlength="8" required>
           <label class="float-label" for="password">Password</label>
-          <span class="invalid required"></span>
+          <span class="required"></span>
         </div>
 
         <button class="btn btn-outline-primary mt-2" type="submit">Sign Up</button>
         </form>
 
         <div class="input-group mt-2">
-          <textarea name="feedback" id="" cols="30" rows="10" placeholder="Feedback"></textarea>
+          <textarea name="feedback" id="feedback" cols="30" rows="10" placeholder="Feedback"></textarea>
           <label class="float-label" for="feedback">Feedback</label>
         </div>
 
