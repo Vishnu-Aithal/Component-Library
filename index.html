@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"> </script>
+
+
+  <title>P0 Components</title>
+</head>
+
+<body>
+  <div class="container-lg p-2 shadow-sm my-3">
+    <!-- Alerts -->
+    <h3>Alerts</h3>
+    <div class="alert alert-primary br-1 p-3 mx-auto my-4 shadow-sm-hover">
+      Primary Alert
+      <span class="alert-dismiss ms-auto"><i class="fas fa-times-circle"></i></span>
+    </div>
+    <div class="alert alert-secondary br-1 p-3 mx-auto my-4 shadow-sm-hover">
+      Secondary Alert
+      <span class="alert-dismiss ms-auto"><i class="fas fa-times-circle"></i></span>
+    </div>
+    <div class="alert alert-outline-primary br-1 p-3 mx-auto my-4 shadow-sm-hover">
+      Primary Outline Alert
+      <span class="alert-dismiss ms-auto"><i class="fas fa-times-circle"></i></span>
+    </div>
+    <div class="alert alert-outline-secondary br-1 p-3 mx-auto my-4 shadow-sm-hover">
+      Secondary Outline Alert
+      <span class="alert-dismiss ms-auto"><i class="fas fa-times-circle"></i></span>
+    </div>
+    <div class="alert alert-danger br-1 p-3 mx-auto my-4 shadow-sm-hover">
+      Danger Alert
+      <span class="alert-dismiss ms-auto"><i class="fas fa-times-circle"></i></span>
+    </div>
+    <div class="alert alert-warning br-1 p-3 mx-auto my-4 shadow-sm-hover">
+      Warning Alert
+      <span class="alert-dismiss ms-auto"><i class="fas fa-times-circle"></i></span>
+    </div>
+    <div class="alert alert-primary br-1 p-3 mx-auto my-4 shadow-sm-hover">
+      Primary Alert with <a class="alert-link ms-1" href="link">link</a>
+      <span class="alert-dismiss ms-auto"><i class="fas fa-times-circle"></i></span>
+    </div>
+  </div>
+
+  <!-- Avatars -->
+  <div class="container-lg p-2 my-2 shadow-md">
+    <h3>Avatars</h3>
+    <h4>
+      Avatar sizes, with shapes modifiable by border radius utility class
+    </h4>
+
+    <div class="avatar avatar-xs m-2 br-r shadow-md-hover">
+      <img src="./avatar/avatar_demo.png" alt="avatar" />
+    </div>
+
+    <div class="avatar avatar-sm m-2 br-2 shadow-md-hover">
+      <img src="./avatar/avatar_demo.png" alt="avatar" />
+    </div>
+
+    <div class="avatar avatar-md m-2 br-3 shadow-md-hover">
+      <img src="./avatar/avatar_demo.png" alt="avatar" />
+    </div>
+
+    <div class="avatar avatar-lg m-2 br-4 shadow-md-hover">
+      <img src="./avatar/avatar_demo.png" alt="avatar" />
+    </div>
+
+    <div class="avatar avatar-xl m-2 br-r shadow-md-hover">
+      <img src="./avatar/avatar_demo.png" alt="avatar" />
+    </div>
+    <hr />
+    <h4>Avatar with Text and Text on Hover</h4>
+
+    <div class="avatar avatar-text-only avatar-md m-2 br-r shadow-md-hover">
+      <p class="avatar-text text-lg text-bold text-center">AB</p>
+    </div>
+
+    <div class="avatar avatar-text-onhover avatar-md m-2 br-r shadow-md-hover">
+      <p class="avatar-text text-bold text-center">View</p>
+      <img src="./avatar/avatar_demo.png" alt="avatar" />
+    </div>
+  </div>
+
+  <!-- Badges -->
+  <div class="container-lg p-2 shadow-sm">
+    <h3>Badges</h3>
+    <!-- button with badge -->
+    <button class="badge-parent btn btn-primary m-4 shadow-md-hover">bottom right<span
+        class="badge badge-bottom-right count br-1 bg-secondary">
+        <p class="badge-text">99</p>
+      </span></button>
+
+    <button class="badge-parent btn btn-primary m-4 shadow-md-hover">bottom-left<span
+        class="badge badge-bottom-left count br-2 bg-secondary">
+        <p class="badge-text">99</p>
+      </span></button>
+
+    <button class="badge-parent btn btn-primary m-4 shadow-md-hover">top-left<span
+        class="badge badge-top-left count br-3 bg-secondary">
+        <p class="badge-text">99</p>
+      </span></button>
+
+
+    <button class="badge-parent btn btn-primary m-4 shadow-md-hover">top-right<span
+        class="badge badge-top-right count br-r bg-secondary">
+        <p class="badge-text">99</p>
+      </span></button>
+
+
+
+    <hr>
+
+    <!-- avatar with badge -->
+
+    <div class="badge-parent avatar avatar-md br-r m-3 shadow-md-hover">
+      <img src="./avatar/avatar_demo.png" alt="">
+      <span class="badge badge-bottom-right status bg-green"></span>
+    </div>
+
+    <div class="badge-parent avatar avatar-md br-3 m-3 shadow-md-hover">
+      <img src="./avatar/avatar_demo.png" alt="">
+      <span class="badge badge-bottom-left status bg-red"></span>
+    </div>
+
+    <div class="badge-parent avatar avatar-md br-4 m-3 shadow-md-hover">
+      <img src="./avatar/avatar_demo.png" alt="">
+      <span class="badge badge-top-right status bg-yellow"></span>
+    </div>
+
+    <div class="badge-parent avatar avatar-md br-r m-3 shadow-md-hover">
+      <img src="./avatar/avatar_demo.png" alt="">
+      <span class="badge badge-top-left count br-r bg-primary">
+        <p class="badge-text">99</p>
+      </span>
+    </div>
+
+    <hr>
+
+    <!-- icon with badge -->
+
+
+    <button class="badge-parent btn btn-icon-lg br-1 m-4 shadow-md-hover"><i class="far fa-heart"></i>
+      <span class="badge badge-bottom-right count br-1 bg-red">
+        <p class="badge-text">99</p>
+      </span></button>
+
+
+    <button class="badge-parent btn btn-icon-lg br-2 m-4 shadow-md-hover"><i class="fas fa-share-alt"></i></i>
+      <span class="badge badge-bottom-left count br-2 bg-red">
+        <p class="badge-text">99</p>
+      </span></button>
+
+
+    <button class="badge-parent btn btn-icon-lg br-3 m-4 shadow-md-hover"><i class="fas fa-envelope"></i>
+      <span class="badge badge-top-right count br-3 bg-red">
+        <p class="badge-text">99</p>
+      </span></button>
+
+
+    <button class="badge-parent btn btn-icon-lg br-r m-4 shadow-md-hover"><i class="fas fa-folder-open"></i>
+      <span class="badge badge-top-left count br-4 bg-red">
+        <p class="badge-text">99</p>
+      </span></button>
+
+
+  </div>
+
+  <div class="container-lg p-2 my-3 shadow-md">
+    <h3>Buttons</h3>
+    <button class="btn m-1 shadow-md-hover">Button</button>
+    <button class="btn btn-lg m-1 shadow-md-hover">large button</button>
+    <button class="btn m-1 shadow-md-hover" disabled>Button Disabled</button>
+
+    <button class="btn btn-primary m-1 shadow-md-hover">
+      primary button
+    </button>
+    <button class="btn btn-primary m-1 shadow-md-hover" disabled>
+      Primary disabled
+    </button>
+
+    <button class="btn btn-secondary m-1 shadow-md-hover">
+      secondary button
+    </button>
+    <button class="btn btn-secondary m-1 shadow-md-hover" disabled>
+      Secondary disabled
+    </button>
+
+    <button class="btn btn-outline-primary m-1 shadow-md-hover">
+      outline primary
+    </button>
+    <button class="btn btn-outline-primary m-1 shadow-md-hover" disabled>
+      outline primary disabled
+    </button>
+
+    <button class="btn btn-outline-secondary m-1 shadow-md-hover">
+      outline secondary
+    </button>
+    <button class="btn btn-outline-secondary m-1 shadow-md-hover" disabled>
+      >outline secondary disabled
+    </button>
+
+    <button class="btn btn-icon shadow-sm-hover br-2 m-1">
+      <i class="fas fa-share-alt"></i>
+    </button>
+    <button class="btn btn-icon shadow-sm-hover br-r m-1">
+      <i class="fas fa-ellipsis-v"></i>
+    </button>
+
+    <button class="btn btn-icon-lg shadow-sm-hover br-2 m-1">
+      <i class="fas fa-share-alt"></i>
+    </button>
+    <button class="btn btn-icon-lg shadow-sm-hover br-r m-1">
+      <i class="fas fa-ellipsis-v"></i>
+    </button>
+
+    <a href="#" class="btn btn-link btn-primary m-1">Primary Link</a>
+    <a href="#" class="btn btn-link btn-secondary m-1">Secondary Link</a>
+    <a href="#" class="btn btn-link btn-primary disabled m-1">Disabled Link</a>
+
+    <button class="btn btn-float btn-icon-lg btn-primary shadow-md-hover br-r">
+      <i class="fas fa-plus"></i>
+    </button>
+  </div>
+
+  <!-- Cards -->
+  <div class="container-lg p-2 shadow-xs">
+    <h3>Cards</h3>
+    <div class="card shadow-sm m-3">
+      <div class="card-badge bg-yellow p-1">New</div>
+      <div class="card-img">
+        <img class=""
+          src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1122&q=80"
+          alt="Card Header Image" srcset="" />
+      </div>
+      <div class="card-body p-2">
+        <h3 class="card-heading heading-xs">Product Title</h3>
+        <p class="text-semi-bold text-gray">by Brand</p>
+        <p class="mt-3">Small description about product</p>
+      </div>
+      <div class="card-footer p-2 mb-1">
+        <button class="btn btn-primary">Buy Now</button>
+        <button class="btn btn-secondary ms-1">Add To Cart</button>
+        <button class="btn btn-icon br-2 ms-auto">
+          <i class="far fa-heart"></i>
+        </button>
+        <button class="btn btn-icon br-2">
+          <i class="fas fa-share-alt"></i>
+        </button>
+        <button class="btn btn-icon br-2">
+          <i class="fas fa-ellipsis-v"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="card shadow-sm m-3">
+      <div class="card-overlay">
+        <p class="heading-md text-bold">Out Of Stock</p>
+      </div>
+      <div class="card-img">
+        <img class=""
+          src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1122&q=80"
+          alt="Card Header Image" srcset="" />
+      </div>
+      <div class="card-body p-2">
+        <h3 class="card-heading heading-xs">Product Title</h3>
+        <p class="text-semi-bold text-gray">by Brand</p>
+        <p class="mt-3">Small description about product</p>
+      </div>
+      <div class="card-footer p-2 mb-1">
+        <button class="btn btn-primary">Buy Now</button>
+        <button class="btn btn-secondary ms-1">Add To Cart</button>
+        <button class="btn btn-icon br-2 ms-auto">
+          <i class="far fa-heart"></i>
+        </button>
+        <button class="btn btn-icon br-2">
+          <i class="fas fa-share-alt"></i>
+        </button>
+        <button class="btn btn-icon br-2">
+          <i class="fas fa-ellipsis-v"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="card shadow-sm m-3">
+      <div class="card-dismiss">
+        <i class="fas fa-times clr-white"></i>
+      </div>
+      <div class="card-img">
+        <img class=""
+          src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1122&q=80"
+          alt="Card Header Image" srcset="" />
+      </div>
+      <div class="card-body p-2">
+        <h3 class="card-heading heading-xs">Product Title</h3>
+        <p class="text-semi-bold text-gray">by Brand</p>
+        <p class="mt-3">Small description about product</p>
+      </div>
+      <div class="card-footer p-2 mb-1">
+        <button class="btn btn-primary">Buy Now</button>
+        <button class="btn btn-secondary ms-1">Add To Cart</button>
+        <button class="btn btn-icon br-2 ms-auto">
+          <i class="far fa-heart"></i>
+        </button>
+        <button class="btn btn-icon br-2">
+          <i class="fas fa-share-alt"></i>
+        </button>
+        <button class="btn btn-icon br-2">
+          <i class="fas fa-ellipsis-v"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="card shadow-sm m-3">
+      <div class="card-body p-2">
+        <h3 class="card-heading heading-xs">Product Title</h3>
+        <p class="text-semi-bold text-gray">by Brand</p>
+        <p class="mt-3">Small description about product</p>
+      </div>
+      <div class="card-footer p-2 mb-1">
+        <button class="btn btn-primary">Buy Now</button>
+        <button class="btn btn-secondary ms-1">Add To Cart</button>
+        <button class="btn btn-icon br-2 ms-auto">
+          <i class="far fa-heart"></i>
+        </button>
+        <button class="btn btn-icon br-2">
+          <i class="fas fa-share-alt"></i>
+        </button>
+        <button class="btn btn-icon br-2">
+          <i class="fas fa-ellipsis-v"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="card shadow-sm m-3">
+      <div class="card-hz-wrapper">
+        <div class="card-img">
+          <img class=""
+            src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1122&q=80"
+            alt="Card Header Image" srcset="" />
+        </div>
+        <div class="card-body p-2">
+          <h3 class="card-heading heading-xs">Product Title</h3>
+          <p class="text-semi-bold text-gray">by Brand</p>
+          <p class="mt-3">Small description about product</p>
+        </div>
+      </div>
+      <div class="card-footer py-1">
+        <button class="btn btn-primary">Buy Now</button>
+        <button class="btn btn-secondary ms-1">Add To Cart</button>
+        <button class="btn btn-icon br-2 ms-auto">
+          <i class="far fa-heart"></i>
+        </button>
+        <button class="btn btn-icon br-2">
+          <i class="fas fa-share-alt"></i>
+        </button>
+        <button class="btn btn-icon br-2">
+          <i class="fas fa-ellipsis-v"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Images -->
+  <div class="container-lg p-3 shadow-lg">
+    <h3 class="mb-2">Responsive Image</h3>
+    <img class="img-responsive" src="./images/image-demo.jpg" alt="Roads">
+
+    <div class="container-sm p-3 shadow-lg">
+      <h2 class="mb-2">Round Image </h2>
+      <img class="img-responsive ar-1-1 br-r" src="./images/image-demo.jpg" alt="Roads">
+    </div>
+
+    <div class="container-sm p-3 shadow-lg">
+      <h3 class="mb-2">Fixed Aspect Ratio - 1:1</h3>
+      <img class="img-responsive ar-1-1" src="./images/image-demo.jpg" alt="Roads">
+
+
+      <h3 class="mb-2">Fixed Aspect Ratio - 4:3</h3>
+      <img class="img-responsive ar-4-3" src="./images/image-demo.jpg" alt="Roads">
+
+      <h3 class="mb-2">Fixed Aspect Ratio - 16:9</h3>
+      <img class="img-responsive ar-16-9" src="./images/image-demo.jpg" alt="Roads">
+
+    </div>
+  </div>
+
+  <!-- Inputs -->
+  <div class="container-lg p-4 shadow-lg">
+    <form action="" class="styled-form shadow-md-hover mx-auto">
+
+      <div class="input-group">
+        <input type="text" class="" name="name" placeholder="Enter Name" required>
+        <label class="float-label" for="name">Name</label>
+        <span class="required"></span>
+      </div>
+
+      <div class="input-group">
+        <input class="invalid" type="email" name="email" id="email" placeholder="Enter Email" required>
+        <label class="float-label" for="email">Email</label>
+        <span class="required"></span>
+      </div>
+
+      <div class="input-group">
+        <input class="valid" type="password" name="password" id="password" placeholder="Enter New Password"
+          minlength="8" required>
+        <label class="float-label" for="password">Password</label>
+        <span class="required"></span>
+      </div>
+
+      <button class="btn btn-outline-primary mt-2" type="submit">Sign Up</button>
+    </form>
+
+    <div class="input-group mt-2 mx-auto">
+      <textarea name="feedback" id="feedback" cols="30" rows="10" placeholder="Feedback"></textarea>
+      <label class="float-label" for="feedback">Feedback</label>
+    </div>
+
+
+  </div>
+  </div>
+</body>
+
+</html>
