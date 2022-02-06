@@ -72,9 +72,8 @@
 
 .card-dismiss {
   position: absolute;
-  top: 0%;
-  left: 100%;
-  transform: translate(-50%, -50%);
+  top: 2%;
+  right: 2%;
   user-select: none;
   cursor: pointer;
 }
