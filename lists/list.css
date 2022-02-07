@@ -1,0 +1,39 @@
+@import url(/style.css);
+
+.list-stacked {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.list-stacked li {
+  max-width: 100%;
+  padding: 0.5rem;
+  border: 0.5px solid lightgray;
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.list-spaced-border,
+.list-spaced {
+  padding: 0.5rem;
+  flex-direction: column;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.list-spaced li,
+.list-spaced-border li {
+  max-width: 100%;
+  margin: 0.25rem 0;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.list-spaced-border li {
+  border: 0.5px solid lightgray;
+}
