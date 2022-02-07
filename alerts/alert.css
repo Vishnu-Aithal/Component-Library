@@ -1,0 +1,45 @@
+@import url(/utitlities/utilities.css);
+
+.alert {
+  display: flex;
+  width: 600px;
+  max-width: 90%;
+  color: var(--color-text-white);
+  transition: all ease 0.2s;
+  user-select: none;
+}
+
+.alert.alert-primary {
+  background-color: var(--color-primary);
+}
+
+.alert.alert-secondary {
+  background-color: var(--color-secondary);
+}
+
+.alert.alert-outline-primary {
+  color: var(--color-text-black);
+  border: solid 2px var(--color-primary);
+}
+
+.alert.alert-outline-secondary {
+  color: var(--color-text-black);
+  border: solid 2px var(--color-secondary);
+}
+
+.alert.alert-danger {
+  background-color: var(--color-red)
+}
+
+.alert.alert-warning {
+  background-color: var(--color-yellow);
+}
+
+.alert .alert-dismiss {
+  cursor: pointer;
+  user-select: none;
+}
+
+.alert .alert-link {
+  color: var(--color-text-white);
+}

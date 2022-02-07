@@ -1,37 +1,82 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Lato:wght@300;400;700;900&family=Montserrat:wght@300;400;700;900&family=Roboto:wght@300;400;700;900&family=Ubuntu:wght@300;400;700&display=swap");
+/*
+font-family: 'Dongle', sans-serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Ubuntu', sans-serif; 
+*/
 /* Heading */
 
-.heading-large {
+.heading-lg {
   font-size: 3rem;
+  line-height: 4rem;
+}
+
+.heading-md {
+  font-size: 2rem;
   line-height: 2.5rem;
 }
 
-.heading-medium {
-  font-size: 2rem;
-  line-height: 1.5rem;
+.heading-sm {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
-.heading-small {
-  font-size: 1.5rem;
-  line-height: 1rem;
+.heading-xs {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 /* text-size */
 
-.text-large {
+.text-lg {
   font-size: 1.5rem;
+  line-height: 2rem;
 }
 
-.text-small {
+.text-md {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-sm {
   font-size: 0.7rem;
+  line-height: 1.25rem;
+}
+
+.text-xs {
+  font-size: 0.5rem;
+  line-height: 1rem;
 }
 
 /* text-color */
 
 .text-gray {
-  color: #94a3b8;
+  color: gray;
+}
+
+.text-black {
+  color: var(--color-text-black);
+}
+
+.text-white {
+  color: var(--color-text-white);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
 }
 
 /* font-weight */
+.text-black {
+  font-weight: 900;
+}
 
 .text-bold {
   font-weight: 700;
@@ -41,6 +86,28 @@
   font-weight: 600;
 }
 
+.text-regular {
+  font-weight: 400;
+}
+
 .text-light {
   font-weight: 300;
+}
+
+/* text-align */
+
+.text-center {
+  text-align: center;
+}
+
+.text-start {
+  text-align: start;
+}
+
+.text-end {
+  text-align: end;
+}
+
+.text-just {
+  text-align: justify;
 }

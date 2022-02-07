@@ -1,0 +1,144 @@
+:root {
+  --color-primary: #3b82f6;
+  --color-primary-dark: #2563eb;
+  --color-primary-light: #60a5fa;
+  --color-secondary: #fb923c;
+  --color-secondary-dark: #f97316;
+  --color-secondary-light: #fdba74;
+  --color-off-white: #eeeeee;
+  --color-text-black: #18181b;
+  --color-text-white: #f8fafc;
+  --color-red: #dc2626;
+  --color-yellow: #facc15;
+  --color-green: #22c55e;
+  --color-light-gray: #e5e7eb;
+  --color-blue: #2563eb;
+}
+
+.bg-none {
+  background-color: none;
+}
+
+.bg-inherit {
+  background-color: inherit;
+}
+
+.bg-white {
+  background-color: var(--color-text-white);
+}
+
+.bg-black {
+  background-color: var(--color-text-black);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-primary-light {
+  background-color: var(--color-primary-light);
+}
+
+.bg-primary-dark {
+  background-color: var(--color-primary-dark);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.bg-secondary-light {
+  background-color: var(--color-secondary-light);
+}
+
+.bg-secondary-dark {
+  background-color: var(--color-secondary-dark);
+}
+
+.bg-red {
+  background-color: var(--color-red);
+}
+
+.bg-blue {
+  background-color: var(--color-blue);
+}
+
+.bg-yellow {
+  background-color: var(--color-yellow);
+}
+
+.bg-green {
+  background-color: var(--color-green);
+}
+
+.bg-light-gray {
+  background-color: var(--color-light-gray);
+}
+
+.bg-off-white {
+  background-color: var(--color-off-white);
+}
+
+.clr-none {
+  color: none;
+}
+
+.clr-inherit {
+  color: inherit;
+}
+
+.clr-white {
+  color: var(--color-text-white);
+}
+
+.clr-black {
+  color: var(--color-text-black);
+}
+
+.clr-primary {
+  color: var(--color-primary);
+}
+
+.clr-primary-light {
+  color: var(--color-primary-light);
+}
+
+.clr-primary-dark {
+  color: var(--color-primary-dark);
+}
+
+.clr-secondary {
+  color: var(--color-secondary);
+}
+
+.clr-secondary-light {
+  color: var(--color-secondary-light);
+}
+
+.clr-secondary-dark {
+  color: var(--color-secondary-dark);
+}
+
+.clr-red {
+  color: var(--color-red);
+}
+
+.clr-blue {
+  color: var(--color-blue);
+}
+
+.clr-yellow {
+  color: var(--color-yellow);
+}
+
+.clr-green {
+  color: var(--color-green);
+}
+
+.clr-light-gray {
+  color: var(--color-light-gray);
+}
+
+.clr-off-white {
+  color: var(--color-off-white);
+}

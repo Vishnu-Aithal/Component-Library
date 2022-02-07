@@ -1,0 +1,54 @@
+@import url(/utitlities/utilities.css);
+@import url(/buttons/button.css);
+@import url(/avatar/avatar.css);
+
+.badge-parent {
+  position: relative;
+}
+
+.badge {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.badge-parent .badge-bottom-right {
+  top: 90%;
+  left: 90%;
+}
+
+.badge-parent .badge-bottom-left {
+  top: 90%;
+  left: 10%;
+}
+
+.badge-parent .badge-top-right {
+  top: 10%;
+  left: 90%;
+}
+
+.badge-parent .badge-top-left {
+  top: 10%;
+  left: 90%;
+}
+
+.badge.count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge-text {
+  user-select: none;
+  line-height: initial;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.badge.status {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: solid 1px var(--color-text-white);
+}

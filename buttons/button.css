@@ -1,0 +1,116 @@
+@import url(/utitlities/utilities.css);
+
+.btn {
+  border: none;
+  padding: 0.5rem;
+  background-color: inherit;
+  color: inherit;
+  transition: all 250ms ease;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 600;
+  line-height: initial;
+}
+
+.btn:hover {
+  background-color: var(--color-light-gray);
+}
+
+.btn:disabled,
+.btn-link.disabled {
+  background-color: var(--color-off-white);
+  color: gray;
+  box-shadow: none;
+  cursor: default;
+}
+
+.btn.btn-lg {
+  padding: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.btn.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
+}
+
+.btn.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.btn.btn-primary:disabled,
+.btn-link.btn-primary.disabled {
+  background-color: var(--color-primary-light);
+}
+
+.btn.btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-text-white);
+}
+
+.btn.btn-secondary:hover {
+  background-color: var(--color-secondary-dark);
+}
+
+.btn.btn-secondary:disabled,
+.btn-link.btn-secondary.disabled {
+  background-color: var(--color-secondary-light);
+}
+
+.btn.btn-outline-primary {
+  border: solid 2px var(--color-primary);
+}
+
+.btn.btn-outline-primary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
+}
+
+.btn.btn-outline-primary:disabled,
+.btn-link.btn-outline-primary.disabled {
+  background-color: var(--color-off-white);
+  border-color: var(--color-primary-light);
+  color: gray;
+}
+
+.btn.btn-outline-secondary {
+  border: solid 2px var(--color-secondary);
+}
+
+.btn.btn-outline-secondary:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-text-white);
+}
+
+.btn.btn-outline-secondary:disabled,
+.btn-link.btn-outline-secondary.disabled {
+  border-color: var(--color-secondary-light);
+  background-color: var(--color-off-white);
+  color: gray;
+}
+
+.btn.btn-icon {
+  min-width: 2rem;
+}
+
+.btn.btn-icon-lg {
+  min-width: 3rem;
+  font-size: 1.25rem;
+  padding: 0.75rem;
+}
+
+.btn-link:link,
+.btn-link:visited {
+  text-decoration: none;
+}
+
+.btn-link.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.btn-float {
+  position: fixed;
+  top: 85vh;
+  left: 85vw;
+}

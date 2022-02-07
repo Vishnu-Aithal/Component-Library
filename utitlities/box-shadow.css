@@ -1,50 +1,49 @@
 /* box-shadows */
 
 .shadow-xs {
-  box-shadow: 0.5px 0.5px 0.5px lightgray;
+  box-shadow: 1px 1px 1px #00000033;
 }
 
-.shadow-small {
-  box-shadow: 1px 1px 1px lightgray;
+.shadow-sm {
+  box-shadow: 2px 2px 2px #00000033;
 }
 
-.shadow-medium {
-  box-shadow: 2px 2px 2px lightgray;
+.shadow-md {
+  box-shadow: 3px 3px 3px #00000055;
 }
 
-.shadow-large {
-  box-shadow: 3px 3px 3px lightgray;
+.shadow-lg {
+  box-shadow: 4px 4px 4px #00000033;
 }
 
 /* small shadow only on hover */
 
 .shadow-hover-only:hover {
-  box-shadow: 1px 1px 1px lightgray;
+  box-shadow: 2px 2px 2px #00000033;
 }
 
 /* shadow with larger shadow on hover */
 
 .shadow-xs-hover {
-  box-shadow: 0.5px 0.5px 0.5px lightgray;
+  box-shadow: 1px 1px 1px #00000033;
 }
 
 .shadow-xs-hover:hover {
-  box-shadow: 1px 1px 1px lightgray;
+  box-shadow: 2px 2px 2px #00000033;
 }
 
-.shadow-small-hover {
-  box-shadow: 1px 1px 1px lightgray;
+.shadow-sm-hover {
+  box-shadow: 2px 2px 2px #00000033;
 }
 
-.shadow-small-hover:hover {
-  box-shadow: 2px 2px 2px lightgray;
+.shadow-sm-hover:hover {
+  box-shadow: 3px 3px 3px #00000033;
 }
 
-.shadow-medium-hover {
-  box-shadow: 2px 2px 2px lightgray;
+.shadow-md-hover {
+  box-shadow: 3px 3px 3px #00000033;
 }
 
-.shadow-medium-hover:hover {
-  box-shadow: 3px 3px 3px lightgray;
-
+.shadow-md-hover:hover {
+  box-shadow: 4px 4px 4px #00000033;
 }
