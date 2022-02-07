@@ -1,7 +1,7 @@
 @import url(/utitlities/utilities.css);
 
 .btn {
-  border: none;
+  border: solid 2px rgba(255, 255, 255, 0);
   padding: 0.5rem;
   background-color: inherit;
   color: inherit;
@@ -30,6 +30,7 @@
 }
 
 .btn.btn-primary {
+  border-color: var(--color-primary);
   background-color: var(--color-primary);
   color: var(--color-text-white);
 }
@@ -44,6 +45,7 @@
 }
 
 .btn.btn-secondary {
+  border-color: var(--color-secondary);
   background-color: var(--color-secondary);
   color: var(--color-text-white);
 }
@@ -58,7 +60,7 @@
 }
 
 .btn.btn-outline-primary {
-  border: solid 2px var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 .btn.btn-outline-primary:hover {
@@ -74,7 +76,7 @@
 }
 
 .btn.btn-outline-secondary {
-  border: solid 2px var(--color-secondary);
+  border-color: var(--color-secondary);
 }
 
 .btn.btn-outline-secondary:hover {
