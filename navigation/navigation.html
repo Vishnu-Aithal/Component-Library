@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="navigation.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <nav class="nav-bar bg-light-gray shadow-xs">
+    <div class="nav-header heading-sm text-bold clr-primary me-2"><a class="nav-link" href="#">Header</a></div>
+    <div class="nav-search ms-auto br-4">
+      <input class=" p-2 br-3" type="text" placeholder="search">
+      <div class="btn btn-icon"><i class="fas fa-search"></i></div>
+    </div>
+    <button class="nav-toggle btn btn-icon-lg clr-primary br-2 ms-2" data-toggle="#nav-links"><i
+        class="fas fa-bars"></i></button>
+    <ul class=" ms-auto nav-links clr-secondary" id="nav-links">
+      <li class="active mx-1"><a href="#" class="btn btn-link br-2 badge-parent"><i class="far fa-heart"></i><span
+            class="badge badge-top-right count br-r bg-white clr-primary">
+            <p class="badge-text">99</p>
+          </span></a></li>
+      <li class="active mx-1"><a href="#" class="btn br-2 btn-link badge-parent"><i
+            class="fas fa-shopping-cart"></i><span class="badge badge-top-right count bg-white clr-primary br-r">
+            <p class="badge-text">1</p>
+          </span></a></li>
+      <li class="mx-1"><a href="#" class="btn btn-link br-2">About</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="container-sm shadow-xs p-3">
+    <h3 class="my-2">Vertical Nav</h3>
+    <aside class="nav-vertical bg-off-white">
+      <div class="nav-header heading-xs text-bold clr-secondary"><a class="nav-link" href="#">Contents</a></div>
+      <ul class=" nav-links clr-primary-light">
+        <li class="active my-1"><a href="#" class="nav-link">Main</a></li>
+        <li class="my-1"><a href="#" class="nav-link">This Content</a></li>
+        <li class="my-1"><a href="#" class="nav-link">That Content</a></li>
+        <li class="">Item with subcontent
+          <ul class="nav-links ms-2">
+            <li class="my-1"><a href="#" class="nav-link">Main</a></li>
+            <li class="my-1"><a href="#" class="nav-link">This Content</a></li>
+            <li class="my-1"><a href="#" class="nav-link">That Content</a></li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+  </div>
+
+  <script src="navigation.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+@import url(/style.css);
+
+.nav-bar {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 100%;
+  position: relative;
+}
+
+.nav-search {
+  background-color: white;
+  flex-shrink: 1;
+  border: none;
+  display: flex;
+  overflow: hidden;
+}
+
+.nav-search input {
+  min-width: 0;
+  border: none;
+  flex-shrink: 1;
+}
+
+.nav-search input:focus {
+  outline: none;
+}
+
+.nav-vertical {
+  max-width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.nav-link,
+.nav-link:link,
+.nav-link:visited {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media only screen and (max-width:600px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: inline-block;
+  }
+
+  .nav-links.show {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    background-color: inherit;
+    top: 100%;
+    right: 0.5rem;
+    border-radius: 0 0 1rem 1rem;
+  }
+
+  .nav-links li {
+    text-align: center;
+    width: 100%;
+    margin: 0.5rem 0;
+    border: 1px;
+  }
+
+}
+
+.nav-vertical .nav-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-vertical .nav-links-sub {
+  padding-left: 1rem;
+}
+
+.nav-links li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.nav-links li.active {
+  font-weight: bold;
+}
