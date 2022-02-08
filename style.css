@@ -1,4 +1,3 @@
-@import url(/utitlities/utilities.css);
 @import url(/alerts/alert.css);
 @import url(/avatar/avatar.css);
 @import url(/badge/badge.css);
@@ -6,6 +5,7 @@
 @import url(/card/card.css);
 @import url(/images/image.css);
 @import url(/inputs/input.css);
+@import url(/utitlities/utilities.css);
 
 body {
   font-family: "Ubuntu", sans-serif;
