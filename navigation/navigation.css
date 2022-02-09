@@ -27,24 +27,12 @@
   outline: none;
 }
 
-.nav-vertical {
-  max-width: 100%;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-}
-
 .nav-link,
 .nav-link:link,
 .nav-link:visited {
   cursor: pointer;
   text-decoration: none;
   color: inherit;
-}
-
-.nav-links li:hover {
-  transform: scale(1.1);
 }
 
 .nav-toggle {
@@ -64,6 +52,10 @@
   border-radius: 5px;
 }
 
+.nav-links li:hover {
+  transform: scale(1.1);
+}
+
 .nav-links li.active {
   position: relative;
 }
@@ -80,12 +72,11 @@
   z-index: 1;
 }
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width: 600px) {
   .nav-links {
     display: flex;
     overflow: hidden;
     flex-direction: column;
-    align-items: flex-end;
     position: absolute;
     background-color: inherit;
     top: 100%;
@@ -99,7 +90,7 @@
 
   .nav-links.show {
     opacity: 1;
-    transform: scale(1) translateY(0);
+    transform: scaleX(1);
     z-index: 1;
   }
 
@@ -119,11 +110,8 @@
     text-align: center;
     width: 100%;
     margin: 1rem 0;
-    border: 1px;
   }
-
 }
-
 
 /* Side Bar */
 
@@ -136,12 +124,6 @@
   align-items: start;
   position: relative;
   transition: all 0.2s ease;
-}
-
-.side-bar a:link,
-.side-bar a:visited {
-  text-decoration: none;
-  color: inherit;
 }
 
 .side-bar-header {
@@ -166,24 +148,29 @@
   transition: all 0.2s ease;
 }
 
+.side-bar a:link,
+.side-bar a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
 .side-bar .list-item,
-.side-bar .list-sub-toggle {
+.side-bar .list-sub-header {
   padding: 0.5rem;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.side-bar .list-sub-toggle i {
+.side-bar .list-sub-header i {
   pointer-events: none;
 }
 
-.side-bar .list-sub-toggle.active i {
+.side-bar .list-sub-header.active i {
   transform: rotate(90deg);
 }
 
 .side-bar .list-sub {
   opacity: 1;
-  transform: scaleY(1);
   transform-origin: top;
   transition: all 0.2s ease;
 }
@@ -194,11 +181,11 @@
 }
 
 .side-bar .list-item:hover,
-.side-bar .list-sub-toggle:hover {
+.side-bar .list-sub-header:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.side-bar.hide>.list-main,
+.side-bar.hide > .list-main,
 .side-bar.hide .side-bar-title {
   transform: translateX(-120%);
   transform-origin: left;
