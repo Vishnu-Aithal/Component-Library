@@ -8,6 +8,11 @@
   --color-off-white: #eeeeee;
   --color-text-black: #18181b;
   --color-text-white: #f8fafc;
+  --color-black: #000000;
+  --color-black-shadow: #00000033;
+  --color-black-light: rgba(0, 0, 0, 0.1);
+  --color-white: #ffffff;
+  --color-white-transparent: rgba(255, 255, 255, 0);
   --color-red: #dc2626;
   --color-yellow: #facc15;
   --color-green: #22c55e;
