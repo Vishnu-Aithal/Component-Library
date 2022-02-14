@@ -1,53 +1,42 @@
-@import url(/utitlities/utilities.css);
-@import url(/buttons/button.css);
-@import url(/images/image.css);
-
 .card {
   display: flex;
   flex-direction: column;
   width: 350px;
   max-width: 95%;
   position: relative;
+  border: solid 0.5px var(--color-black-light);
 }
 
-.card-img img {
+.card__img {
   object-fit: cover;
   height: 100%;
   width: 100%;
   cursor: pointer;
 }
 
-.card-heading {
+.card__heading {
   cursor: pointer;
 }
 
-.card-body {
+.card__body {
   display: flex;
   flex-direction: column;
   justify-content: start;
 }
 
-.card-footer {
-  display: flex;
-  flex-direction: row;
-}
-
-.card-hz-wrapper {
+.card__cta-wrapper {
   display: flex;
   flex-direction: row;
   width: 100%;
-  min-height: 100px;
+  border-top: solid 1px var(--color-black-light);
 }
 
-.card-hz-wrapper .card-img {
-  flex-shrink: 1;
-  flex-basis: 40%;
-}
-
-.card-overlay {
+.card__overlay-wrapper {
   display: none;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
+  flex-direction: column;
+  padding: 2rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -56,13 +45,14 @@
   opacity: 0.5;
   user-select: none;
   background-color: white;
+  z-index: 1;
 }
 
-.card:hover .card-overlay {
+.card:hover .card__overlay-wrapper {
   display: flex;
 }
 
-.card-badge {
+.card__badge {
   position: absolute;
   top: 0%;
   left: 0%;
@@ -70,10 +60,30 @@
   user-select: none;
 }
 
-.card-dismiss {
+.card__dismiss {
   position: absolute;
-  top: 2%;
-  right: 2%;
+  top: 5%;
+  right: 7%;
   user-select: none;
   cursor: pointer;
+}
+
+.card__dismiss:hover {
+  transform: scale(1.3);
+}
+
+.card__dismiss * {
+  pointer-events: none;
+}
+
+.card--text-only .card__img-wrapper {
+  display: none;
+}
+
+.card--hz .card__body {
+  flex-direction: row;
+}
+
+.card--hz .card__img-wrapper {
+  width: 150px;
 }

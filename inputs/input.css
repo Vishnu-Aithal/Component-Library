@@ -1,32 +1,21 @@
-@import url(/utitlities/utilities.css);
-@import url(/buttons/button.css);
-
-.styled-form {
-  border: solid 1px var(--color-secondary);
-  padding: 2rem;
-  width: fit-content;
-}
-
-.input-group {
+.input {
   position: relative;
   width: fit-content;
   margin-top: 0.5rem;
 }
 
-.input-group input,
-.input-group textarea {
+.input__field {
   max-width: 100%;
   padding: 0.5rem;
-  border: solid 2px var(--color-primary-light);
+  border: solid 2px lightgray;
   border-radius: 0.25rem;
 }
 
-.input-group input:focus,
-.input-group textarea:focus {
-  outline-color: var(--color-primary-dark);
+.input__field:focus {
+  outline-color: var(--color-primary-light);
 }
 
-.input-group .float-label {
+.input__float-label {
   padding: 0.1rem;
   position: absolute;
   max-width: calc(100% - 1.5rem);
@@ -36,6 +25,7 @@
   z-index: 1;
   font-size: 0.75rem;
   font-weight: 600;
+  color: var(--color-text-black);
   transform: translate(0%, 0%);
   transition: transform 0.2s ease, opacity 0.2s ease;
   opacity: 0;
@@ -43,7 +33,7 @@
   white-space: nowrap;
 }
 
-.float-label::before {
+.input__float-label::before {
   position: absolute;
   content: "";
   height: 4px;
@@ -54,13 +44,12 @@
   z-index: -1;
 }
 
-.input-group input:not(:placeholder-shown) + .float-label,
-.input-group textarea:not(:placeholder-shown) + .float-label {
+.input__field:not(:placeholder-shown) + .input__float-label {
   opacity: 1;
   transform: translate(2%, -100%);
 }
 
-.input-group input:required:placeholder-shown ~ .required:after {
+.input__field:required:placeholder-shown ~ .input__required:after {
   position: absolute;
   color: red;
   content: "*";
@@ -69,9 +58,9 @@
   top: 4px;
 }
 
-.input-group input.valid {
+.input__field--valid {
   border-bottom-color: var(--color-green);
 }
-.input-group input.invalid {
+.input__field--invalid {
   border-bottom-color: var(--color-red);
 }

@@ -1,39 +1,40 @@
 @import url(/style.css);
 
-.list-stacked {
+.list-group {
   display: flex;
   flex-direction: column;
   max-width: 100%;
   overflow: auto;
+  list-style: none;
 }
 
-.list-stacked li {
+.list__item {
   max-width: 100%;
   padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  cursor: default;
+}
+
+.list__item:hover {
+  background-color: var(--color-black-light);
+}
+
+.list-group--stacked .list__item {
   border: 0.5px solid lightgray;
-  display: flex;
-  align-items: center;
-  list-style: none;
 }
 
-.list-spaced-border,
-.list-spaced {
+.list-group--spaced-box,
+.list-group--spaced {
   padding: 0.5rem;
-  flex-direction: column;
-  max-width: 100%;
-  overflow: auto;
 }
 
-.list-spaced li,
-.list-spaced-border li {
-  max-width: 100%;
+.list-group--spaced-box .list__item,
+.list-group--spaced .list__item {
   margin: 0.25rem 0;
-  padding: 0.5rem;
-  display: flex;
-  align-items: center;
-  list-style: none;
 }
 
-.list-spaced-border li {
+.list-group--spaced-box .list__item {
   border: 0.5px solid lightgray;
 }

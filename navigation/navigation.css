@@ -9,7 +9,7 @@
   position: relative;
 }
 
-.nav-search {
+.nav-bar__search-wrapper {
   background-color: white;
   flex-shrink: 1;
   border: none;
@@ -17,50 +17,55 @@
   overflow: hidden;
 }
 
-.nav-search input {
+.nav-bar__search-input {
   min-width: 0;
   border: none;
   flex-shrink: 1;
 }
 
-.nav-search input:focus {
+.nav-bar__search-input:focus {
   outline: none;
 }
 
-.nav-link,
-.nav-link:link,
-.nav-link:visited {
-  cursor: pointer;
-  text-decoration: none;
-  color: inherit;
-}
-
-.nav-toggle {
+.nav-bar__toggle {
   display: none;
 }
 
-.nav-links {
+.nav-bar__list-group {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.nav-links li {
+.nav-bar__list-item {
   list-style: none;
   cursor: pointer;
-  padding: 0.25rem;
-  border-radius: 5px;
+  margin-left: 2rem;
 }
 
-.nav-links li:hover {
+.nav-bar__list-item:hover {
   transform: scale(1.1);
 }
 
-.nav-links li.active {
+.nav-bar__link,
+.nav-bar__link:link,
+.nav-bar__link:visited {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5rem;
+}
+
+.nav-bar__link * {
+  pointer-events: none;
+}
+
+.nav-bar__link--active.active {
   position: relative;
 }
 
-.nav-links li.active::after {
+.nav-bar__link--active::after {
   display: inline-block;
   content: "";
   position: absolute;
@@ -72,41 +77,42 @@
   z-index: 1;
 }
 
-@media only screen and (max-width: 600px) {
-  .nav-links {
+@media only screen and (max-width: 768px) {
+  .nav-bar__list-group {
     display: flex;
     overflow: hidden;
     flex-direction: column;
     position: absolute;
     background-color: inherit;
     top: 100%;
-    right: 0.5rem;
+    right: 1rem;
+    padding-top: 0.5rem;
     border-radius: 0 0 5px 5px;
     opacity: 0;
     transform: scaleX(0) translateY(-50%);
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 1px var(--color-black-light);
     transition: all 0.2s ease;
   }
 
-  .nav-links.show {
+  .nav-bar__list-group.show {
     opacity: 1;
     transform: scaleX(1);
     z-index: 1;
   }
 
-  .nav-toggle {
+  .nav-bar__toggle {
     display: inline-block;
   }
 
-  .nav-toggle i {
+  .nav-bar__toggle-icon {
     transition: all 0.2s ease;
   }
 
-  .nav-toggle.active i {
+  .nav-bar__toggle.active .nav-bar__toggle-icon {
     transform: rotate(90deg);
   }
 
-  .nav-links li {
+  .nav-bar__list-item {
     text-align: center;
     width: 100%;
     margin: 1rem 0;
@@ -126,71 +132,74 @@
   transition: all 0.2s ease;
 }
 
-.side-bar-header {
+.side-bar__header-wrapper {
   width: 100%;
   display: flex;
+  padding-left: 0.5rem;
   align-items: center;
   border-bottom: solid 1px var(--color-primary);
   transition: all 0.1s ease;
 }
 
-.side-bar-title {
+.side-bar__heading {
   transition: all 0.2s ease;
 }
 
-.side-bar-toggle.active {
+.side-bar__link:link,
+.side-bar__link:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.side-bar__toggle.active {
   transform: rotate(90deg);
 }
 
-.side-bar ul {
+.side-bar__menu {
   list-style: none;
   max-width: 100%;
   transition: all 0.2s ease;
 }
 
-.side-bar a:link,
-.side-bar a:visited {
-  text-decoration: none;
-  color: inherit;
-}
-
-.side-bar .list-item,
-.side-bar .list-sub-header {
+.side-bar__item {
   padding: 0.5rem;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.side-bar .list-sub-header i {
+.side-bar__item:hover {
+  background-color: var(--color-black-light);
+}
+
+.side-bar__item--header i {
   pointer-events: none;
 }
 
-.side-bar .list-sub-header.active i {
+.side-bar__item--header.active i {
   transform: rotate(90deg);
 }
 
-.side-bar .list-sub {
+.side-bar__menu--sub {
   opacity: 1;
   transform-origin: top;
   transition: all 0.2s ease;
 }
 
-.side-bar .list-sub.hide {
+.side-bar__menu--sub.hide {
   transform: scaleY(0);
   opacity: 0;
 }
 
-.side-bar .list-item:hover,
-.side-bar .list-sub-header:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+.side-bar.hide {
+  transform: translateX(calc(-100% + 4.25rem));
 }
 
-.side-bar.hide > .list-main,
-.side-bar.hide .side-bar-title {
+.side-bar.hide > .side-bar__menu,
+.side-bar.hide .side-bar__heading {
   transform: translateX(-120%);
   transform-origin: left;
 }
 
-.side-bar.hide {
-  transform: translateX(-70%);
+.side-bar.hide .side-bar__header-wrapper {
+  border-bottom: none;
 }

@@ -12,50 +12,63 @@
 <body>
 
   <nav class="nav-bar bg-white shadow-xs">
-    <div class="nav-header heading-md text-bold clr-primary me-2"><a class="nav-link" href="#">Header</a></div>
-    <div class="nav-search ms-auto br-4 shadow-xs">
-      <input class=" p-2 br-3" type="text" placeholder="search">
-      <div class="btn btn-icon"><i class="fas fa-search"></i></div>
+
+    <div class="nav-bar__header heading-md text-bold clr-primary me-2"><a class="nav-bar__link" href="#">Header</a>
     </div>
-    <button class="nav-toggle btn btn-icon-lg clr-primary br-2 ms-2" data-toggle="#nav-links"><i
-        class="fas fa-bars"></i></button>
-    <ul class=" ms-auto nav-links clr-primary" id="nav-links">
-      <li class="mx-1"><a href="#" class="nav-link br-2 p-2 badge-parent"><i class="far fa-heart"></i><span
-            class="badge badge-top-right count br-r bg-secondary-light clr-white">
+
+    <div class="nav-bar__search-wrapper ms-auto br-4 shadow-xs">
+      <input class="nav-bar__search-input p-2 br-3" type="search" placeholder="Search">
+      <div class="nav-bar__search-btn btn btn--icon"><i class="fas fa-search"></i></div>
+    </div>
+
+    <button class="nav-bar__toggle btn btn--icon-lg clr-primary br-2 ms-2" data-toggle="#nav-links"><i
+        class="nav-bar__toggle-icon fas fa-bars"></i></button>
+
+    <ul class=" ms-auto nav-bar__list-group clr-primary" id="nav-links">
+
+      <li class="nav-bar__list-item mx-1"><a href="#" class="nav-bar__link"><i class="far fa-heart"></i><span
+            class="badge  badge--count br-r bg-secondary-light clr-white">
             <p class="badge-text">4</p>
-          </span></a></li>
-      <li class="mx-1"><a href="#" class="nav-link br-2 p-2 badge-parent"><i class="fas fa-shopping-cart"></i><span
-            class="badge badge-top-right count bg-secondary-light clr-white br-r">
+          </span></a>
+      </li>
+
+      <li class="nav-bar__list-item mx-1"><a href="#" class="nav-bar__link"><i class="fas fa-shopping-cart"></i><span
+            class="badge  badge--count bg-secondary-light clr-white br-r">
             <p class="badge-text">1</p>
-          </span></a></li>
-      <li class="active mx-1"><a href="#" class="nav-link">About</a></li>
+          </span></a>
+      </li>
+
+      <li class="nav-bar__list-item mx-1"><a href="#" class="nav-bar__link nav-bar__link--active">About</a>
+      </li>
+
     </ul>
   </nav>
 
 
   <aside class="side-bar shadow-sm p-2" id="side-bar">
 
-    <div class="side-bar-header pb-2 clr-primary">
-      <a class="side-bar-title heading-xs text-bold" href="#">Contents</a>
-      <button class="side-bar-toggle active btn btn-icon-lg ms-auto br-2" data-toggle="#side-bar"><i
-          class="fas fa-bars"></i></button>
+    <div class="side-bar__header-wrapper pb-2 clr-primary">
+      <a class="side-bar__heading side-bar__link heading-xs text-bold" href="#">Contents</a>
+      <button class="side-bar__toggle active btn btn--icon-lg ms-auto br-2" data-toggle="#side-bar"><i
+          class="fas fa-ellipsis-h"></i></button>
     </div>
 
-    <ul class="list-main clr-black">
+    <ul class="side-bar__menu side-bar__menu--main clr-black">
 
-      <li class="list-item my-1"><a href="#" class="">Main</a></li>
+      <li class="side-bar__item my-1"><a class="side-bar__link" href="#" class="">Main</a></li>
 
-      <li class="list-item my-1"><a href="#">This Content</a></li>
+      <li class="side-bar__item my-1"><a class="side-bar__link" href="#">This Content</a></li>
 
-      <li class="list-item my-1"><a href="#">That Content</a></li>
+      <li class="side-bar__item my-1"><a class="side-bar__link" href="#">That Content</a></li>
 
       <li class="my-1">
-        <div class="list-sub-header" data-toggle="#exampleSubList">Item with subcontent<i
-            class="ms-2 fas fa-chevron-right"></i></div>
-        <ul class="ms-2 list-sub hide" id="exampleSubList">
-          <li class="list-item my-1"><a href="#">Main</a></li>
-          <li class="list-item my-1"><a href="#">This Content</a></li>
-          <li class="list-item my-1"><a href="#">That Content</a></li>
+        <div class="side-bar__item side-bar__item--header" data-toggle="#exampleSubList">Item with
+          subcontent<i class="ms-2 fas fa-chevron-right"></i></div>
+
+        <ul class="ms-2 side-bar__menu side-bar__menu--sub hide" id="exampleSubList">
+          <li class="side-bar__item my-1"><a class="side-bar__link" href="#">Main</a></li>
+          <li class="side-bar__item my-1"><a class="side-bar__link" href="#">This Content</a></li>
+          <li class="side-bar__item my-1"><a class="side-bar__link" href="#">That Content</a></li>
       </li>
     </ul>
 

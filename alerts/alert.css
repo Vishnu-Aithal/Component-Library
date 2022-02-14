@@ -1,5 +1,3 @@
-@import url(/utitlities/utilities.css);
-
 .alert {
   display: flex;
   width: 600px;
@@ -9,37 +7,46 @@
   user-select: none;
 }
 
-.alert.alert-primary {
-  background-color: var(--color-primary);
-}
-
-.alert.alert-secondary {
-  background-color: var(--color-secondary);
-}
-
-.alert.alert-outline-primary {
-  color: var(--color-text-black);
-  border: solid 2px var(--color-primary);
-}
-
-.alert.alert-outline-secondary {
-  color: var(--color-text-black);
-  border: solid 2px var(--color-secondary);
-}
-
-.alert.alert-danger {
-  background-color: var(--color-red)
-}
-
-.alert.alert-warning {
-  background-color: var(--color-yellow);
-}
-
-.alert .alert-dismiss {
+.alert__dismiss {
   cursor: pointer;
   user-select: none;
 }
 
-.alert .alert-link {
-  color: var(--color-text-white);
+.alert__dismiss:hover {
+  transform: scale(1.2);
+}
+
+.alert__dismiss > * {
+  pointer-events: none;
+}
+
+.alert__link {
+  margin-left: 0.25rem;
+  color: inherit;
+}
+
+.alert--primary {
+  background-color: var(--color-primary);
+}
+
+.alert--secondary {
+  background-color: var(--color-secondary);
+}
+
+.alert--outline-primary {
+  color: var(--color-text-black);
+  border: solid 2px var(--color-primary);
+}
+
+.alert--outline-secondary {
+  color: var(--color-text-black);
+  border: solid 2px var(--color-secondary);
+}
+
+.alert--danger {
+  background-color: var(--color-red);
+}
+
+.alert--warning {
+  background-color: var(--color-yellow);
 }
