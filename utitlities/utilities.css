@@ -1,8 +1,9 @@
 @import url(aspect-ratio.css);
 @import url(border.css);
 @import url(box-shadow.css);
-@import url(containers.css);
 @import url(colors.css);
+@import url(containers.css);
+@import url(dimensions.css);
 @import url(display.css);
 @import url(margins.css);
 @import url(paddings.css);
