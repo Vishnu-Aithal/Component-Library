@@ -1,0 +1,35 @@
+.modal {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(2px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.modal__body {
+  position: relative;
+  min-height: 200px;
+  min-width: 350px;
+  max-width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid 1px var(--color-light-gray);
+  width: 100%;
+}
+
+.modal__cta-wrapper {
+  width: 100%;
+  border-top: solid 1px var(--color-light-gray);
+}

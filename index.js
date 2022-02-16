@@ -91,3 +91,12 @@ SUI_verticalCollapseToggles.forEach(
       }
     })
 );
+
+//Modal Toggle
+
+const btnShowModal = document.querySelector(".show-modal");
+
+btnShowModal.onclick = () => {
+  const targetModal = document.querySelector(btnShowModal.dataset.target);
+  targetModal.style.display = "flex";
+};
