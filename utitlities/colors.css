@@ -10,7 +10,7 @@
   --color-text-white: #f8fafc;
   --color-black: #000000;
   --color-black-shadow: #00000033;
-  --color-black-light: rgba(0, 0, 0, 0.1);
+  --color-black-light: rgb(238, 238, 240);
   --color-white: #ffffff;
   --color-white-transparent: rgba(255, 255, 255, 0);
   --color-red: #dc2626;
