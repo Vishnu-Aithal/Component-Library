@@ -27,7 +27,7 @@ SUI_dismisses.forEach(
   (dismiss) =>
     (dismiss.onclick = () => {
       const dismissTarget = document.querySelector(dismiss.dataset.target);
-      dismissTarget.style.display = none;
+      dismissTarget.style.display = "none";
     })
 );
 //Alert dismisses
@@ -91,3 +91,12 @@ SUI_verticalCollapseToggles.forEach(
       }
     })
 );
+
+//Modal Toggle
+
+const btnShowModal = document.querySelector(".show-modal");
+
+btnShowModal.onclick = () => {
+  const targetModal = document.querySelector(btnShowModal.dataset.target);
+  targetModal.style.display = "flex";
+};
