@@ -27,7 +27,7 @@ SUI_dismisses.forEach(
   (dismiss) =>
     (dismiss.onclick = () => {
       const dismissTarget = document.querySelector(dismiss.dataset.target);
-      dismissTarget.style.display = none;
+      dismissTarget.style.display = "none";
     })
 );
 //Alert dismisses
