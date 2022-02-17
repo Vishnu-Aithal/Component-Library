@@ -91,3 +91,46 @@ SUI_verticalCollapseToggles.forEach(
       }
     })
 );
+
+//Rating Functionality
+const SUI_ratingInputStars = document.querySelectorAll(
+  ".rating--input .rating__star"
+);
+
+SUI_ratingInputStars.forEach((star) => {
+  const currentStarWrapper = star.parentElement;
+  star.onchange = () => currentStarWrapper.classList.add("rating--checked");
+  star.addEventListener("mouseenter", () =>
+    currentStarWrapper.classList.add("rating--hover")
+  );
+  star.addEventListener("mouseleave", () =>
+    currentStarWrapper.classList.remove("rating--hover")
+  );
+});
+
+const SUI_ratingDisplayStars = document.querySelectorAll(
+  ".rating--display .rating__star"
+);
+
+SUI_ratingDisplayStars.forEach((star) => (star.disabled = true));
+
+const SUI_ratingDisplays = document.querySelectorAll(".rating--display");
+
+SUI_ratingDisplays.forEach((display) => {
+  const rating = display.classList.contains("rating--1")
+    ? 1
+    : display.classList.contains("rating--2")
+    ? 2
+    : display.classList.contains("rating--3")
+    ? 3
+    : display.classList.contains("rating--4")
+    ? 4
+    : display.classList.contains("rating--5")
+    ? 5
+    : 0;
+
+  const displayStars = Array.from(display.children).slice(0, rating);
+  // console.log(rating);
+  // console.log(displayStars);
+  displayStars.forEach((star) => star.classList.add("rating__star--filled"));
+});
