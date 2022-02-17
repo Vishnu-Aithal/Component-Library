@@ -492,6 +492,31 @@
           </ul>
         </div>
       </div>
+      <!-- Toast-Notification -->
+      <div class="container-lg p-3 shadow-sm">
+        <button class="btn btn--primary show-toast" data-target="#example-toast1">Show Toast 1</button>
+        <button class="btn btn--primary show-toast" data-target="#example-toast2">Show Toast 2</button>
+        <div class="toast__container">
+          <div class="toast br-2" id="example-toast1">
+            <div class="toast__header p-2">
+              <h4 class="toast__title">Toast Title 1</h4>
+              <p class="toast__time text-gray text-sm ms-auto">2 seconds ago</p>
+              <div class="toast__dismiss ms-2" data-target="#example-toast1"><i class="fas fa-times-circle"></i>
+              </div>
+            </div>
+            <div class="toast__body text-md p-2"> Toast description</div>
+          </div>
+          <div class="toast br-1" id="example-toast2">
+            <div class="toast__header p-2">
+              <h4 class="toast__title">Toast Title 2</h4>
+              <p class="toast__time text-gray text-sm ms-auto">2 seconds ago</p>
+              <div class="toast__dismiss ms-2" data-target="#example-toast2"><i class="fas fa-times-circle"></i>
+              </div>
+            </div>
+            <div class="toast__body text-md p-2"> Toast description</div>
+          </div>
+        </div>
+      </div>
     </div>
     </div>
 

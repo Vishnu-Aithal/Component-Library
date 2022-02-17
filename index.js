@@ -27,7 +27,7 @@ SUI_dismisses.forEach(
   (dismiss) =>
     (dismiss.onclick = () => {
       const dismissTarget = document.querySelector(dismiss.dataset.target);
-      dismissTarget.style.display = none;
+      dismissTarget.style.display = "none";
     })
 );
 //Alert dismisses
@@ -89,5 +89,54 @@ SUI_verticalCollapseToggles.forEach(
         toggleTarget.classList.remove("show");
         toggleBtn.classList.remove("active");
       }
+    })
+);
+
+//Toast - Functionality
+const SUI_btnShowToasts = document.querySelectorAll(".show-toast");
+const SUI_toastContainer = document.querySelector(".toast__container");
+const SUI_toastDismisses = document.querySelectorAll(".toast__dismiss");
+const SUI_showToast = (toast) => {
+  if (!SUI_toastContainer.classList.contains("toast__container--show"))
+    SUI_toastContainer.classList.add("toast__container--show");
+  toast.classList.add("toast--show");
+  setTimeout(
+    () =>
+      toast.classList.contains("toast--show")
+        ? toast.classList.add("toast--fade")
+        : null,
+    2000
+  );
+  toast.addEventListener("transitionend", () => {
+    SUI_removeToast(toast);
+  });
+};
+
+const SUI_hideToastContainerIfEmpty = () => {
+  const SUI_toasts = document.querySelectorAll(".toast");
+  for (toast of SUI_toasts) {
+    if (toast.classList.contains("toast--show")) return;
+  }
+  SUI_toastContainer.classList.remove("toast__container--show");
+};
+
+const SUI_removeToast = (toast) => {
+  toast.classList.remove("toast--show", "toast--fade");
+  SUI_hideToastContainerIfEmpty();
+};
+
+SUI_btnShowToasts.forEach(
+  (btn) =>
+    (btn.onclick = () => {
+      const targetToast = document.querySelector(btn.dataset.target);
+      SUI_showToast(targetToast);
+    })
+);
+
+SUI_toastDismisses.forEach(
+  (dismiss) =>
+    (dismiss.onclick = () => {
+      const targetToast = document.querySelector(dismiss.dataset.target);
+      SUI_removeToast(targetToast);
     })
 );
