@@ -1,6 +1,7 @@
 .rating {
   width: fit-content;
   user-select: none;
+  --rating-color: gold;
 }
 .rating__star {
   appearance: none;
@@ -48,22 +49,22 @@
 }
 
 .rating__star:checked::after {
-  background-color: gold;
+  background-color: var(--rating-color);
 }
 
 .rating--checked
   .rating__star:not(.rating__star:checked ~ .rating__star)::after {
-  background-color: gold;
+  background-color: var(--rating-color);
 }
 
 .rating--hover .rating__star:hover::after {
-  background-color: gold;
+  background-color: var(--rating-color);
 }
 
 .rating--hover .rating__star:not(.rating__star:hover ~ .rating__star)::after {
-  background-color: gold;
+  background-color: var(--rating-color);
 }
 
 .rating__star--filled::after {
-  background-color: gold;
+  background-color: var(--rating-color);
 }
