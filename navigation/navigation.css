@@ -135,11 +135,6 @@
   overflow-y: auto;
 }
 
-.side-bar__heading {
-  width: 100%;
-  border-bottom: solid 1px var(--color-primary);
-}
-
 .side-bar__link:link,
 .side-bar__link:visited {
   text-decoration: none;
@@ -162,6 +157,16 @@
   width: 100%;
   max-width: 100%;
   overflow-y: auto;
+}
+
+.side-bar__menu--main {
+  padding: 0 0.5rem;
+}
+
+.side-bar__heading {
+  width: 100%;
+  padding: 1rem;
+  border-bottom: solid 1px var(--color-primary);
 }
 
 .side-bar__item {
