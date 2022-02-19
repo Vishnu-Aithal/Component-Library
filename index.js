@@ -92,6 +92,101 @@ SUI_verticalCollapseToggles.forEach(
     })
 );
 
+
+
+//Rating Functionality
+const SUI_ratingInputStars = document.querySelectorAll(
+  ".rating--input .rating__star"
+);
+
+SUI_ratingInputStars.forEach((star) => {
+  const currentStarWrapper = star.parentElement;
+  star.onchange = () => currentStarWrapper.classList.add("rating--checked");
+  star.addEventListener("mouseenter", () =>
+    currentStarWrapper.classList.add("rating--hover")
+  );
+  star.addEventListener("mouseleave", () =>
+    currentStarWrapper.classList.remove("rating--hover")
+  );
+});
+
+const SUI_ratingDisplayStars = document.querySelectorAll(
+  ".rating--display .rating__star"
+);
+
+SUI_ratingDisplayStars.forEach((star) => (star.disabled = true));
+
+const SUI_ratingDisplays = document.querySelectorAll(".rating--display");
+
+SUI_ratingDisplays.forEach((display) => {
+  const rating = display.classList.contains("rating--1")
+    ? 1
+    : display.classList.contains("rating--2")
+    ? 2
+    : display.classList.contains("rating--3")
+    ? 3
+    : display.classList.contains("rating--4")
+    ? 4
+    : display.classList.contains("rating--5")
+    ? 5
+    : 0;
+
+  const displayStars = Array.from(display.children).slice(0, rating);
+  // console.log(rating);
+  // console.log(displayStars);
+  displayStars.forEach((star) => star.classList.add("rating__star--filled"));
+});
+
+//Toast - Functionality
+const SUI_btnShowToasts = document.querySelectorAll(".show-toast");
+const SUI_toastContainer = document.querySelector(".toast__container");
+const SUI_toastDismisses = document.querySelectorAll(".toast__dismiss");
+const SUI_showToast = (toast) => {
+  if (!SUI_toastContainer.classList.contains("toast__container--show"))
+    SUI_toastContainer.classList.add("toast__container--show");
+  toast.classList.add("toast--show");
+  setTimeout(
+    () =>
+      toast.classList.contains("toast--show")
+        ? toast.classList.add("toast--fade")
+        : null,
+    2000
+  );
+  toast.addEventListener("transitionend", () => {
+    SUI_removeToast(toast);
+  });
+};
+
+const SUI_hideToastContainerIfEmpty = () => {
+  const SUI_toasts = document.querySelectorAll(".toast");
+  for (toast of SUI_toasts) {
+    if (toast.classList.contains("toast--show")) return;
+  }
+  SUI_toastContainer.classList.remove("toast__container--show");
+};
+
+const SUI_removeToast = (toast) => {
+  toast.classList.remove("toast--show", "toast--fade");
+  SUI_hideToastContainerIfEmpty();
+};
+
+SUI_btnShowToasts.forEach(
+  (btn) =>
+    (btn.onclick = () => {
+      const targetToast = document.querySelector(btn.dataset.target);
+      SUI_showToast(targetToast);
+    })
+);
+
+SUI_toastDismisses.forEach(
+  (dismiss) =>
+    (dismiss.onclick = () => {
+      const targetToast = document.querySelector(dismiss.dataset.target);
+      SUI_removeToast(targetToast);
+    })
+);
+
+
 //Modal Toggle
 
 const btnShowModal = document.querySelector(".show-modal");
@@ -100,3 +195,4 @@ btnShowModal.onclick = () => {
   const targetModal = document.querySelector(btnShowModal.dataset.target);
   targetModal.style.display = "flex";
 };
+
