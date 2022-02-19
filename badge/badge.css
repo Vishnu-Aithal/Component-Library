@@ -31,7 +31,8 @@
   min-height: 1.5rem;
 }
 
-.badge__text {
+.badge--count::after {
+  content: attr(data-count);
   user-select: none;
   line-height: initial;
   font-size: 0.75rem;
