@@ -49,13 +49,24 @@
   transform: translate(2%, -100%);
 }
 
-.input__field:required:placeholder-shown ~ .input__required:after {
+.input__field:required:placeholder-shown ~ .input__required-text::after,
+.input__field:required:not(:checked) ~ .input__required-check::after,
+.input__field:required ~ .input__required::after {
   position: absolute;
   color: red;
   content: "*";
   font-size: 0.75rem;
-  right: 5px;
-  top: 4px;
+  right: -0.5rem;
+  top: 0;
+}
+
+.input__field:required:not(:checked) ~ .input__required-check::after {
+  position: absolute;
+  color: red;
+  content: "*";
+  font-size: 0.75rem;
+  right: -0.5rem;
+  top: 0;
 }
 
 .input__field--valid {

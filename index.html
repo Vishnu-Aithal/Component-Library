@@ -414,19 +414,23 @@
           <div class="input">
             <input type="text" class="input__field" name="name" placeholder="Enter Name" required>
             <label class="input__float-label" for="name">Name</label>
-            <span class="input__required"></span>
+            <span class="input__required-text"></span>
           </div>
           <div class="input">
             <input class="input__field input__field--invalid" type="email" name="email" id="email"
               placeholder="Enter Email" required>
             <label class="input__float-label" for="email">Email</label>
-            <span class="input__required"></span>
+            <span class="input__required-text"></span>
           </div>
           <div class="input">
             <input class="input__field input__field--valid" type="password" name="password" id="password"
               placeholder="Enter New Password" minlength="8" required>
             <label class="input__float-label" for="password">Password</label>
-            <span class="input__required"></span>
+            <span class="input__required-text"></span>
+          </div>
+          <div class="input">
+            <input type="checkbox" class="input__field" required />
+            <span class="input__required-check"></span>
           </div>
           <button class="btn btn--outline-primary mt-2" type="submit">Sign Up</button>
         </form>
