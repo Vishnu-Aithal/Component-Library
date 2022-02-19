@@ -93,6 +93,7 @@ SUI_verticalCollapseToggles.forEach(
 );
 
 
+
 //Rating Functionality
 const SUI_ratingInputStars = document.querySelectorAll(
   ".rating--input .rating__star"
@@ -184,4 +185,14 @@ SUI_toastDismisses.forEach(
       SUI_removeToast(targetToast);
     })
 );
+
+
+//Modal Toggle
+
+const btnShowModal = document.querySelector(".show-modal");
+
+btnShowModal.onclick = () => {
+  const targetModal = document.querySelector(btnShowModal.dataset.target);
+  targetModal.style.display = "flex";
+};
 
