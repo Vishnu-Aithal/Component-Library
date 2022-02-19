@@ -1,611 +1,969 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>P0 Components</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>P0 Components</title>
-</head>
+  <body>
+    <main>
+      <nav class="nav-bar bg-white shadow-sm">
+        <div class="nav-bar__header heading-md text-bold clr-primary me-2">
+          <a class="nav-bar__link" href="#">Header</a>
+        </div>
 
-<body>
-  <main>
+        <div class="nav-bar__search-wrapper ms-auto br-4 shadow-xs">
+          <input
+            class="nav-bar__search-input p-2 br-3"
+            type="search"
+            placeholder="Search"
+          />
+          <div class="nav-bar__search-btn btn btn--icon">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
 
-    <nav class="nav-bar bg-white shadow-sm">
+        <button
+          class="nav-bar__toggle btn btn--icon-lg clr-primary br-2 ms-2"
+          data-toggle="#nav-links"
+        >
+          <i class="nav-bar__toggle-icon fas fa-bars"></i>
+        </button>
 
-      <div class="nav-bar__header heading-md text-bold clr-primary me-2"><a class="nav-bar__link" href="#">Header</a>
-      </div>
+        <ul class="ms-auto nav-bar__list-group clr-primary" id="nav-links">
+          <li class="nav-bar__list-item mx-1">
+            <a href="#" class="nav-bar__link"
+              ><i class="far fa-heart"></i
+              ><span
+                class="badge badge--count br-r bg-secondary-light clr-white"
+                data-count="4"
+              >
+              </span
+            ></a>
+          </li>
 
-      <div class="nav-bar__search-wrapper ms-auto br-4 shadow-xs">
-        <input class="nav-bar__search-input p-2 br-3" type="search" placeholder="Search">
-        <div class="nav-bar__search-btn btn btn--icon"><i class="fas fa-search"></i></div>
-      </div>
+          <li class="nav-bar__list-item mx-1">
+            <a href="#" class="nav-bar__link"
+              ><i class="fas fa-shopping-cart"></i
+              ><span
+                class="badge badge--count bg-secondary-light clr-white br-r"
+                data-count="1"
+              >
+              </span
+            ></a>
+          </li>
 
-      <button class="nav-bar__toggle btn btn--icon-lg clr-primary br-2 ms-2" data-toggle="#nav-links"><i
-          class="nav-bar__toggle-icon fas fa-bars"></i></button>
+          <li class="nav-bar__list-item mx-1">
+            <a href="#" class="nav-bar__link nav-bar__link--active">About</a>
+          </li>
+        </ul>
+      </nav>
 
-      <ul class=" ms-auto nav-bar__list-group clr-primary" id="nav-links">
-
-        <li class="nav-bar__list-item mx-1"><a href="#" class="nav-bar__link"><i class="far fa-heart"></i><span
-              class="badge  badge--count br-r bg-secondary-light clr-white" data-count="4">
-            </span></a>
-        </li>
-
-        <li class="nav-bar__list-item mx-1"><a href="#" class="nav-bar__link"><i class="fas fa-shopping-cart"></i><span
-              class="badge  badge--count bg-secondary-light clr-white br-r" data-count="1">
-            </span></a>
-        </li>
-
-        <li class="nav-bar__list-item mx-1"><a href="#" class="nav-bar__link nav-bar__link--active">About</a>
-        </li>
-
-      </ul>
-    </nav>
-
-    <aside class="side-bar shadow-sm p-2 clr-primary" id="side-bar">
-      <a class="side-bar__heading side-bar__link heading-xs text-bold clr-primary p-3" href="#">Contents</a>
-      <button class="side-bar__toggle btn btn--icon" data-toggle="#side-bar"><i class="fas fa-chevron-up"></i></button>
-      <ul class="side-bar__menu side-bar__menu--main clr-black">
-        <li class="side-bar__item my-1"><a class="side-bar__link" href="#" class="">Getting Started</a></li>
-        <li class="side-bar__item my-1"><a class="side-bar__link" href="#">Buttons</a></li>
-        <li class="side-bar__item my-1"><a class="side-bar__link" href="#"></a>Alerts</li>
-        <li class="side-bar__item my-1"><a class="side-bar__link" href="#"></a>Avatar</li>
-        <li class="side-bar__item my-1"><a class="side-bar__link" href="#"></a>Badge</li>
-        <li class="side-bar__item my-1"><a class="side-bar__link" href="#"></a>Cards</li>
-        <li class="side-bar__item my-1"><a class="side-bar__link" href="#"></a>Images</li>
-        <li class="side-bar__item my-1"><a class="side-bar__link" href="#"></a>Inputs</li>
-        <li class="side-bar__item my-1"><a class="side-bar__link" href="#"></a>Lists</li>
-        <li class="side-bar__item my-1"><a class="side-bar__link" href="#"></a>Navigation</li>
-        <li class="side-bar__item my-1"><a class="side-bar__link" href="#"></a>Toasts</li>
-        <li class="side-bar__item my-1"><a class="side-bar__link" href="#"></a>Modal</li>
-        <li class="side-bar__item my-1"><a class="side-bar__link" href="#"></a>Ratings</li>
-        <li class="side-bar__item my-1"><a class="side-bar__link" href="#"></a>Ratings</li>
-        <li>
-          <div class="side-bar__item side-bar__item--header vertical-collapse-toggle" data-toggle="#exampleSubList">
-            Utilities<i class="ms-2 fas fa-chevron-right"></i></div>
-          <ul class="side-bar__menu side-bar__menu--sub" id="exampleSubList" data-collapsed="true">
-            <li class="side-bar__item my-1"><a class="side-bar__link" href="#">Aspect Ration</a></li>
-            <li class="side-bar__item my-1"><a class="side-bar__link" href="#">Border Radius</a></li>
-            <li class="side-bar__item my-1"><a class="side-bar__link" href="#">Box Shadows</a></li>
-            <li class="side-bar__item my-1"><a class="side-bar__link" href="#">Colors</a></li>
-            <li class="side-bar__item my-1"><a class="side-bar__link" href="#">Containers</a></li>
-            <li class="side-bar__item my-1"><a class="side-bar__link" href="#">Dimensions</a></li>
-            <li class="side-bar__item my-1"><a class="side-bar__link" href="#">Display</a></li>
-            <li class="side-bar__item my-1"><a class="side-bar__link" href="#">Grid</a></li>
-            <li class="side-bar__item my-1"><a class="side-bar__link" href="#">Margins</a></li>
-            <li class="side-bar__item my-1"><a class="side-bar__link" href="#">Paddings</a></li>
-            <li class="side-bar__item my-1"><a class="side-bar__link" href="#">Typography</a></li>
-          </ul>
-        </li>
-      </ul>
-    </aside>
-
-    <div class="content">
-      <!-- Alerts -->
-      <div class="container-lg p-2 shadow-sm my-3">
-        <h3>Alerts</h3>
-        <div class="alert alert--primary br-1 p-3 mx-auto my-4 shadow-sm-hover">
-          Primary Alert
-          <span class="alert__dismiss ms-auto"><i class="fas fa-times-circle"></i></span>
-        </div>
-        <div class="alert alert--secondary br-1 p-3 mx-auto my-4 shadow-sm-hover">
-          Secondary Alert
-          <span class="alert__dismiss ms-auto"><i class="fas fa-times-circle"></i></span>
-        </div>
-        <div class="alert alert--outline-primary br-1 p-3 mx-auto my-4 shadow-sm-hover">
-          Primary Outline Alert
-          <span class="alert__dismiss ms-auto"><i class="fas fa-times-circle"></i></span>
-        </div>
-        <div class="alert alert--outline-secondary br-1 p-3 mx-auto my-4 shadow-sm-hover">
-          Secondary Outline Alert
-          <span class="alert__dismiss ms-auto"><i class="fas fa-times-circle"></i></span>
-        </div>
-        <div class="alert alert--danger br-1 p-3 mx-auto my-4 shadow-sm-hover">
-          Danger Alert
-          <span class="alert__dismiss ms-auto"><i class="fas fa-times-circle"></i></span>
-        </div>
-        <div class="alert alert--warning br-1 p-3 mx-auto my-4 shadow-sm-hover">
-          Warning Alert
-          <span class="alert__dismiss ms-auto"><i class="fas fa-times-circle"></i></span>
-        </div>
-        <div class="alert alert--primary br-1 p-3 mx-auto my-4 shadow-sm-hover">
-          Primary Alert with <a class="alert__link" href="#">link</a>
-          <span class="alert__dismiss ms-auto"><i class="fas fa-times-circle"></i></span>
-        </div>
-      </div>
-      <!-- Avatars -->
-      <div class="container-lg p-2 my-2 shadow-md">
-        <h3>Avatars</h3>
-        <h4>
-          Avatar sizes, with shapes modifiable by border radius utility class
-        </h4>
-        <div class="avatar avatar--xs m-2 br-r shadow-md-hover">
-          <img class="avatar__img" src="./avatar/avatar_demo.png" alt="avatar" />
-        </div>
-        <div class="avatar avatar--sm m-2 br-2 shadow-md-hover">
-          <img class="avatar__img" src="./avatar/avatar_demo.png" alt="avatar" />
-        </div>
-        <div class="avatar avatar--md m-2 br-3 shadow-md-hover">
-          <img class="avatar__img" src="./avatar/avatar_demo.png" alt="avatar" />
-        </div>
-        <div class="avatar avatar--lg m-2 br-4 shadow-md-hover">
-          <img class="avatar__img" src="./avatar/avatar_demo.png" alt="avatar" />
-        </div>
-        <div class="avatar avatar--xl m-2 br-r shadow-md-hover">
-          <img class="avatar__img" src="./avatar/avatar_demo.png" alt="avatar" />
-        </div>
-        <hr />
-        <h4>Avatar with Text and Text on Hover</h4>
-        <div class="avatar avatar--text-only avatar--md m-2 br-r shadow-md-hover">
-          <p class="avatar__text text-lg text-bold text-center">AB</p>
-        </div>
-        <div class="avatar avatar--text-on-hover avatar--md m-2 br-r shadow-md-hover">
-          <p class="avatar__text text-bold text-center">View</p>
-          <img class="avatar__img" src="./avatar/avatar_demo.png" alt="avatar" />
-        </div>
-      </div>
-      <!-- Badges -->
-      <div class="container-lg p-2 shadow-sm">
-        <h3>Badges</h3>
-        <!-- button with badge -->
-        <button class=" btn btn--primary m-4 shadow-md-hover">bottom right<span
-            class="badge badge--bottom-right badge--count br-1 bg-secondary" data-count="99">
-          </span></button>
-        <button class=" btn btn--primary m-4 shadow-md-hover">bottom-left<span
-            class="badge badge--bottom-left badge--count br-2 bg-secondary" data-count="99">
-          </span></button>
-        <button class=" btn btn--primary m-4 shadow-md-hover">top-left<span
-            class="badge badge--top-left badge--count br-3 bg-secondary" data-count="99">
-          </span></button>
-        <button class=" btn btn--primary m-4 shadow-md-hover">top-right<span
-            class="badge badge--count br-r bg-secondary" data-count="99">
-          </span></button>
-        <hr>
-        <!-- avatar with badge -->
-        <div class=" avatar avatar--md br-r m-3 shadow-md-hover">
-          <img class="avatar__img" src="./avatar/avatar_demo.png" alt="">
-          <span class="badge badge--bottom-right badge--status bg-green"></span>
-        </div>
-        <div class=" avatar avatar--md br-3 m-3 shadow-md-hover">
-          <img class="avatar__img" src="./avatar/avatar_demo.png" alt="">
-          <span class="badge badge--bottom-left badge--status bg-red"></span>
-        </div>
-        <div class=" avatar avatar--md br-4 m-3 shadow-md-hover">
-          <img class="avatar__img" src="./avatar/avatar_demo.png" alt="">
-          <span class="badge badge--status bg-yellow"></span>
-        </div>
-        <div class=" avatar avatar--md br-r m-3 shadow-md-hover">
-          <img class="avatar__img" src="./avatar/avatar_demo.png" alt="">
-          <span class="badge badge--count badge--top-left br-r bg-primary clr-white" data-count="99">
-          </span>
-        </div>
-        <hr>
-        <!-- icon with badge -->
-        <button class=" btn btn--icon-lg br-1 m-4 shadow-md-hover"><i class="far fa-heart"></i>
-          <span class="badge badge--bottom-right badge--count br-1 bg-red clr-white" data-count="99">
-          </span></button>
-        <button class=" btn btn--icon-lg br-2 m-4 shadow-md-hover"><i class="fas fa-share-alt"></i></i>
-          <span class="badge badge--bottom-left badge--count br-2 bg-red clr-white" data-count="99">
-          </span></button>
-        <button class=" btn btn--icon-lg br-3 m-4 shadow-md-hover"><i class="fas fa-envelope"></i>
-          <span class="badge badge--count br-r bg-red clr-white" data-count="99">
-          </span></button>
-        <button class=" btn btn--icon-lg br-r m-4 shadow-md-hover"><i class="fas fa-folder-open"></i>
-          <span class="badge badge--top-left badge--count br-4 bg-red clr-white" data-count="99">
-          </span></button>
-      </div>
-      <!-- Buttons -->
-      <div class="container-lg p-2 my-3 shadow-md">
-        <h3>Buttons</h3>
-        <button class="btn m-1 shadow-md-hover">Button</button>
-        <button class="btn btn--lg m-1 shadow-md-hover">large button</button>
-        <button class="btn m-1 shadow-md-hover" disabled>Button Disabled</button>
-        <button class="btn btn--primary m-1 shadow-md-hover">
-          primary button
+      <aside class="side-bar shadow-sm p-2 clr-primary" id="side-bar">
+        <a
+          class="side-bar__heading side-bar__link heading-xs text-bold clr-primary p-3"
+          href="#"
+          >Contents</a
+        >
+        <button class="side-bar__toggle btn btn--icon" data-toggle="#side-bar">
+          <i class="fas fa-chevron-up"></i>
         </button>
-        <button class="btn btn--primary m-1 shadow-md-hover" disabled>
-          Primary disabled
-        </button>
-        <button class="btn btn--secondary m-1 shadow-md-hover">
-          secondary button
-        </button>
-        <button class="btn btn--secondary m-1 shadow-md-hover" disabled>
-          Secondary disabled
-        </button>
-        <button class="btn btn--outline-primary m-1 shadow-md-hover">
-          outline primary
-        </button>
-        <button class="btn btn--outline-primary m-1 shadow-md-hover" disabled>
-          outline primary disabled
-        </button>
-        <button class="btn btn--outline-secondary m-1 shadow-md-hover">
-          outline secondary
-        </button>
-        <button class="btn btn--outline-secondary m-1 shadow-md-hover" disabled>
-          >outline secondary disabled
-        </button>
-        <button class="btn btn--icon shadow-sm-hover br-2 m-1">
-          <i class="fas fa-share-alt"></i>
-        </button>
-        <button class="btn btn--icon shadow-sm-hover br-r m-1">
-          <i class="fas fa-ellipsis-v"></i>
-        </button>
-        <button class="btn btn--icon-lg shadow-sm-hover br-2 m-1">
-          <i class="fas fa-share-alt"></i>
-        </button>
-        <button class="btn btn--icon-lg shadow-sm-hover br-r m-1">
-          <i class="fas fa-ellipsis-v"></i>
-        </button>
-        <a href="#" class="btn btn--link btn--primary shadow-md-hover m-1">Primary Link</a>
-        <a href="#" class="btn btn--link btn--secondary shadow-md-hover m-1">Secondary Link</a>
-        <a href="#" class="btn btn--link btn--primary shadow-md-hover disabled m-1">Disabled Link</a>
-        <button class="btn btn--float btn--icon-lg btn--primary shadow-md-hover br-r">
-          <i class="fas fa-plus"></i>
-        </button>
-      </div>
-      <!-- Cards -->
-      <div class="container-lg p-2 shadow-xs">
-        <h3>Cards</h3>
-        <div class="card shadow-sm m-3">
-          <div class="card__badge bg-yellow p-1">New</div>
-          <div class="card__body p-2">
-            <div class="card__img-wrapper">
-              <img class="card__img"
-                src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1122&q=80"
-                alt="Card Header Image" srcset="" />
+        <ul class="side-bar__menu side-bar__menu--main clr-black">
+          <li class="side-bar__item my-1">
+            <a class="side-bar__link" href="#" class="">Getting Started</a>
+          </li>
+          <li class="side-bar__item my-1">
+            <a class="side-bar__link" href="#">Buttons</a>
+          </li>
+          <li class="side-bar__item my-1">
+            <a class="side-bar__link" href="#"></a>Alerts
+          </li>
+          <li class="side-bar__item my-1">
+            <a class="side-bar__link" href="#"></a>Avatar
+          </li>
+          <li class="side-bar__item my-1">
+            <a class="side-bar__link" href="#"></a>Badge
+          </li>
+          <li class="side-bar__item my-1">
+            <a class="side-bar__link" href="#"></a>Cards
+          </li>
+          <li class="side-bar__item my-1">
+            <a class="side-bar__link" href="#"></a>Images
+          </li>
+          <li class="side-bar__item my-1">
+            <a class="side-bar__link" href="#"></a>Inputs
+          </li>
+          <li class="side-bar__item my-1">
+            <a class="side-bar__link" href="#"></a>Lists
+          </li>
+          <li class="side-bar__item my-1">
+            <a class="side-bar__link" href="#"></a>Navigation
+          </li>
+          <li class="side-bar__item my-1">
+            <a class="side-bar__link" href="#"></a>Toasts
+          </li>
+          <li class="side-bar__item my-1">
+            <a class="side-bar__link" href="#"></a>Modal
+          </li>
+          <li class="side-bar__item my-1">
+            <a class="side-bar__link" href="#"></a>Ratings
+          </li>
+          <li class="side-bar__item my-1">
+            <a class="side-bar__link" href="#"></a>Ratings
+          </li>
+          <li>
+            <div
+              class="side-bar__item side-bar__item--header vertical-collapse-toggle"
+              data-toggle="#exampleSubList"
+            >
+              Utilities<i class="ms-2 fas fa-chevron-right"></i>
             </div>
-            <div class="card__text-wrapper">
-              <h3 class="card__heading heading-xs">Product Title</h3>
-              <p class="text-semi-bold text-gray">by Brand</p>
-              <p class="mt-3">Small description about product</p>
-            </div>
+            <ul
+              class="side-bar__menu side-bar__menu--sub"
+              id="exampleSubList"
+              data-collapsed="true"
+            >
+              <li class="side-bar__item my-1">
+                <a class="side-bar__link" href="#">Aspect Ration</a>
+              </li>
+              <li class="side-bar__item my-1">
+                <a class="side-bar__link" href="#">Border Radius</a>
+              </li>
+              <li class="side-bar__item my-1">
+                <a class="side-bar__link" href="#">Box Shadows</a>
+              </li>
+              <li class="side-bar__item my-1">
+                <a class="side-bar__link" href="#">Colors</a>
+              </li>
+              <li class="side-bar__item my-1">
+                <a class="side-bar__link" href="#">Containers</a>
+              </li>
+              <li class="side-bar__item my-1">
+                <a class="side-bar__link" href="#">Dimensions</a>
+              </li>
+              <li class="side-bar__item my-1">
+                <a class="side-bar__link" href="#">Display</a>
+              </li>
+              <li class="side-bar__item my-1">
+                <a class="side-bar__link" href="#">Grid</a>
+              </li>
+              <li class="side-bar__item my-1">
+                <a class="side-bar__link" href="#">Margins</a>
+              </li>
+              <li class="side-bar__item my-1">
+                <a class="side-bar__link" href="#">Paddings</a>
+              </li>
+              <li class="side-bar__item my-1">
+                <a class="side-bar__link" href="#">Typography</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+
+      <div class="content">
+        <!-- Alerts -->
+        <div class="container-lg p-2 shadow-sm my-3">
+          <h3>Alerts</h3>
+          <div
+            class="alert alert--primary br-1 p-3 mx-auto my-4 shadow-sm-hover"
+          >
+            Primary Alert
+            <span class="alert__dismiss ms-auto"
+              ><i class="fas fa-times-circle"></i
+            ></span>
           </div>
-          <div class="card__cta-wrapper p-2">
-            <button class="btn btn--primary">Buy Now</button>
-            <button class="btn btn--secondary ms-1">Add To Cart</button>
-            <button class="btn btn--icon br-2 ms-auto">
-              <i class="far fa-heart"></i>
-            </button>
-            <button class="btn btn--icon br-2">
-              <i class="fas fa-share-alt"></i>
-            </button>
-            <button class="btn btn--icon br-2">
-              <i class="fas fa-ellipsis-v"></i>
-            </button>
+          <div
+            class="alert alert--secondary br-1 p-3 mx-auto my-4 shadow-sm-hover"
+          >
+            Secondary Alert
+            <span class="alert__dismiss ms-auto"
+              ><i class="fas fa-times-circle"></i
+            ></span>
           </div>
-        </div>
-        <div class="card shadow-sm m-3">
-          <div class="card__overlay-wrapper">
-            <p class="card__overlay-text heading-md text-bold">Out Of Stock</p>
-            <a class="btn btn--link" href="#">View Product</a>
+          <div
+            class="alert alert--outline-primary br-1 p-3 mx-auto my-4 shadow-sm-hover"
+          >
+            Primary Outline Alert
+            <span class="alert__dismiss ms-auto"
+              ><i class="fas fa-times-circle"></i
+            ></span>
           </div>
-          <div class="card__body p-2">
-            <div class="card__img-wrapper">
-              <img class="card__img"
-                src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1122&q=80"
-                alt="Card Header Image" srcset="" />
-            </div>
-            <div class="card__text-wrapper">
-              <h3 class="card__heading heading-xs">Product Title</h3>
-              <p class="text-semi-bold text-gray">by Brand</p>
-              <p class="mt-3">Small description about product</p>
-            </div>
+          <div
+            class="alert alert--outline-secondary br-1 p-3 mx-auto my-4 shadow-sm-hover"
+          >
+            Secondary Outline Alert
+            <span class="alert__dismiss ms-auto"
+              ><i class="fas fa-times-circle"></i
+            ></span>
           </div>
-          <div class="card__cta-wrapper p-2">
-            <button class="btn btn--primary">Buy Now</button>
-            <button class="btn btn--secondary ms-1">Add To Cart</button>
-            <button class="btn btn--icon br-2 ms-auto">
-              <i class="far fa-heart"></i>
-            </button>
-            <button class="btn btn--icon br-2">
-              <i class="fas fa-share-alt"></i>
-            </button>
-            <button class="btn btn--icon br-2">
-              <i class="fas fa-ellipsis-v"></i>
-            </button>
+          <div
+            class="alert alert--danger br-1 p-3 mx-auto my-4 shadow-sm-hover"
+          >
+            Danger Alert
+            <span class="alert__dismiss ms-auto"
+              ><i class="fas fa-times-circle"></i
+            ></span>
           </div>
-        </div>
-        <div class="card shadow-sm m-3">
-          <div class="card__dismiss">
-            <i class="fas fa-times clr-white"></i>
+          <div
+            class="alert alert--warning br-1 p-3 mx-auto my-4 shadow-sm-hover"
+          >
+            Warning Alert
+            <span class="alert__dismiss ms-auto"
+              ><i class="fas fa-times-circle"></i
+            ></span>
           </div>
-          <div class="card__body p-2">
-            <div class="card__img-wrapper">
-              <img class="card__img"
-                src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1122&q=80"
-                alt="Card Header Image" srcset="" />
-            </div>
-            <div class="card__text-wrapper">
-              <h3 class="card__heading heading-xs">Product Title</h3>
-              <p class="text-semi-bold text-gray">by Brand</p>
-              <p class="mt-3">Small description about product</p>
-            </div>
-          </div>
-          <div class="card__cta-wrapper p-2">
-            <button class="btn btn--primary">Buy Now</button>
-            <button class="btn btn--secondary ms-1">Add To Cart</button>
-            <button class="btn btn--icon br-2 ms-auto">
-              <i class="far fa-heart"></i>
-            </button>
-            <button class="btn btn--icon br-2">
-              <i class="fas fa-share-alt"></i>
-            </button>
-            <button class="btn btn--icon br-2">
-              <i class="fas fa-ellipsis-v"></i>
-            </button>
-          </div>
-        </div>
-        <div class="card card--text-only shadow-sm m-3">
-          <div class="card__body p-2">
-            <div class="card__img-wrapper">
-              <img class="card__img"
-                src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1122&q=80"
-                alt="Card Header Image" srcset="" />
-            </div>
-            <div class="card__text-wrapper">
-              <h3 class="card__heading heading-xs">Product Title</h3>
-              <p class="text-semi-bold text-gray">by Brand</p>
-              <p class="mt-3">Small description about product</p>
-            </div>
-          </div>
-          <div class="card__cta-wrapper p-2">
-            <button class="btn btn--primary">Buy Now</button>
-            <button class="btn btn--secondary ms-1">Add To Cart</button>
-            <button class="btn btn--icon br-2 ms-auto">
-              <i class="far fa-heart"></i>
-            </button>
-            <button class="btn btn--icon br-2">
-              <i class="fas fa-share-alt"></i>
-            </button>
-            <button class="btn btn--icon br-2">
-              <i class="fas fa-ellipsis-v"></i>
-            </button>
+          <div
+            class="alert alert--primary br-1 p-3 mx-auto my-4 shadow-sm-hover"
+          >
+            Primary Alert with <a class="alert__link" href="#">link</a>
+            <span class="alert__dismiss ms-auto"
+              ><i class="fas fa-times-circle"></i
+            ></span>
           </div>
         </div>
-        <div class="card card--hz shadow-sm m-3">
-          <div class="card__body p-2">
-            <div class="card__img-wrapper">
-              <img class="card__img"
-                src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1122&q=80"
-                alt="Card Header Image" srcset="" />
-            </div>
-            <div class="card__text-wrapper ps-2">
-              <h3 class="card__heading heading-xs">Product Title</h3>
-              <p class="text-semi-bold text-gray">by Brand</p>
-              <p class="mt-3">Small description about product</p>
-            </div>
+        <!-- Avatars -->
+        <div class="container-lg p-2 my-2 shadow-md">
+          <h3>Avatars</h3>
+          <h4>
+            Avatar sizes, with shapes modifiable by border radius utility class
+          </h4>
+          <div class="avatar avatar--xs m-2 br-r shadow-md-hover">
+            <img
+              class="avatar__img"
+              src="./avatar/avatar_demo.png"
+              alt="avatar"
+            />
           </div>
-          <div class="card__cta-wrapper p-2">
-            <button class="btn btn--primary">Buy Now</button>
-            <button class="btn btn--secondary ms-1">Add To Cart</button>
-            <button class="btn btn--icon br-2 ms-auto">
-              <i class="far fa-heart"></i>
-            </button>
-            <button class="btn btn--icon br-2">
-              <i class="fas fa-share-alt"></i>
-            </button>
-            <button class="btn btn--icon br-2">
-              <i class="fas fa-ellipsis-v"></i>
-            </button>
+          <div class="avatar avatar--sm m-2 br-2 shadow-md-hover">
+            <img
+              class="avatar__img"
+              src="./avatar/avatar_demo.png"
+              alt="avatar"
+            />
+          </div>
+          <div class="avatar avatar--md m-2 br-3 shadow-md-hover">
+            <img
+              class="avatar__img"
+              src="./avatar/avatar_demo.png"
+              alt="avatar"
+            />
+          </div>
+          <div class="avatar avatar--lg m-2 br-4 shadow-md-hover">
+            <img
+              class="avatar__img"
+              src="./avatar/avatar_demo.png"
+              alt="avatar"
+            />
+          </div>
+          <div class="avatar avatar--xl m-2 br-r shadow-md-hover">
+            <img
+              class="avatar__img"
+              src="./avatar/avatar_demo.png"
+              alt="avatar"
+            />
+          </div>
+          <hr />
+          <h4>Avatar with Text and Text on Hover</h4>
+          <div
+            class="avatar avatar--text-only avatar--md m-2 br-r shadow-md-hover"
+          >
+            <p class="avatar__text text-lg text-bold text-center">AB</p>
+          </div>
+          <div
+            class="avatar avatar--text-on-hover avatar--md m-2 br-r shadow-md-hover"
+          >
+            <p class="avatar__text text-bold text-center">View</p>
+            <img
+              class="avatar__img"
+              src="./avatar/avatar_demo.png"
+              alt="avatar"
+            />
           </div>
         </div>
-      </div>
-      <!-- Images -->
-      <div class="container-lg p-3 shadow-lg">
-        <h3 class="mb-2">Responsive Image</h3>
-        <img class="img-responsive" src="./images/image-demo.jpg" alt="Roads">
-        <div class="container-sm p-3 shadow-lg">
-          <h2 class="mb-2">Round Image </h2>
-          <img class="img-responsive ar-1-1 br-r" src="./images/image-demo.jpg" alt="Roads">
+        <!-- Badges -->
+        <div class="container-lg p-2 shadow-sm">
+          <h3>Badges</h3>
+          <!-- button with badge -->
+          <button class="btn btn--primary m-4 shadow-md-hover">
+            bottom right<span
+              class="badge badge--bottom-right badge--count br-1 bg-secondary"
+              data-count="99"
+            >
+            </span>
+          </button>
+          <button class="btn btn--primary m-4 shadow-md-hover">
+            bottom-left<span
+              class="badge badge--bottom-left badge--count br-2 bg-secondary"
+              data-count="99"
+            >
+            </span>
+          </button>
+          <button class="btn btn--primary m-4 shadow-md-hover">
+            top-left<span
+              class="badge badge--top-left badge--count br-3 bg-secondary"
+              data-count="99"
+            >
+            </span>
+          </button>
+          <button class="btn btn--primary m-4 shadow-md-hover">
+            top-right<span
+              class="badge badge--count br-r bg-secondary"
+              data-count="99"
+            >
+            </span>
+          </button>
+          <hr />
+          <!-- avatar with badge -->
+          <div class="avatar avatar--md br-r m-3 shadow-md-hover">
+            <img class="avatar__img" src="./avatar/avatar_demo.png" alt="" />
+            <span
+              class="badge badge--bottom-right badge--status bg-green"
+            ></span>
+          </div>
+          <div class="avatar avatar--md br-3 m-3 shadow-md-hover">
+            <img class="avatar__img" src="./avatar/avatar_demo.png" alt="" />
+            <span class="badge badge--bottom-left badge--status bg-red"></span>
+          </div>
+          <div class="avatar avatar--md br-4 m-3 shadow-md-hover">
+            <img class="avatar__img" src="./avatar/avatar_demo.png" alt="" />
+            <span class="badge badge--status bg-yellow"></span>
+          </div>
+          <div class="avatar avatar--md br-r m-3 shadow-md-hover">
+            <img class="avatar__img" src="./avatar/avatar_demo.png" alt="" />
+            <span
+              class="badge badge--count badge--top-left br-r bg-primary clr-white"
+              data-count="99"
+            >
+            </span>
+          </div>
+          <hr />
+          <!-- icon with badge -->
+          <button class="btn btn--icon-lg br-1 m-4 shadow-md-hover">
+            <i class="far fa-heart"></i>
+            <span
+              class="badge badge--bottom-right badge--count br-1 bg-red clr-white"
+              data-count="99"
+            >
+            </span>
+          </button>
+          <button class="btn btn--icon-lg br-2 m-4 shadow-md-hover">
+            <i class="fas fa-share-alt"></i>
+            <span
+              class="badge badge--bottom-left badge--count br-2 bg-red clr-white"
+              data-count="99"
+            >
+            </span>
+          </button>
+          <button class="btn btn--icon-lg br-3 m-4 shadow-md-hover">
+            <i class="fas fa-envelope"></i>
+            <span
+              class="badge badge--count br-r bg-red clr-white"
+              data-count="99"
+            >
+            </span>
+          </button>
+          <button class="btn btn--icon-lg br-r m-4 shadow-md-hover">
+            <i class="fas fa-folder-open"></i>
+            <span
+              class="badge badge--top-left badge--count br-4 bg-red clr-white"
+              data-count="99"
+            >
+            </span>
+          </button>
         </div>
-        <div class="container-sm p-3 shadow-lg">
-          <h3 class="mb-2">Fixed Aspect Ratio - 1:1</h3>
-          <img class="img-responsive ar-1-1" src="./images/image-demo.jpg" alt="Roads">
-          <h3 class="mb-2">Fixed Aspect Ratio - 4:3</h3>
-          <img class="img-responsive ar-4-3" src="./images/image-demo.jpg" alt="Roads">
-          <h3 class="mb-2">Fixed Aspect Ratio - 16:9</h3>
-          <img class="img-responsive ar-16-9" src="./images/image-demo.jpg" alt="Roads">
+        <!-- Buttons -->
+        <div class="container-lg p-2 my-3 shadow-md">
+          <h3>Buttons</h3>
+          <button class="btn m-1 shadow-md-hover">Button</button>
+          <button class="btn btn--lg m-1 shadow-md-hover">large button</button>
+          <button class="btn m-1 shadow-md-hover" disabled>
+            Button Disabled
+          </button>
+          <button class="btn btn--primary m-1 shadow-md-hover">
+            primary button
+          </button>
+          <button class="btn btn--primary m-1 shadow-md-hover" disabled>
+            Primary disabled
+          </button>
+          <button class="btn btn--secondary m-1 shadow-md-hover">
+            secondary button
+          </button>
+          <button class="btn btn--secondary m-1 shadow-md-hover" disabled>
+            Secondary disabled
+          </button>
+          <button class="btn btn--outline-primary m-1 shadow-md-hover">
+            outline primary
+          </button>
+          <button class="btn btn--outline-primary m-1 shadow-md-hover" disabled>
+            outline primary disabled
+          </button>
+          <button class="btn btn--outline-secondary m-1 shadow-md-hover">
+            outline secondary
+          </button>
+          <button
+            class="btn btn--outline-secondary m-1 shadow-md-hover"
+            disabled
+          >
+            >outline secondary disabled
+          </button>
+          <button class="btn btn--icon shadow-sm-hover br-2 m-1">
+            <i class="fas fa-share-alt"></i>
+          </button>
+          <button class="btn btn--icon shadow-sm-hover br-r m-1">
+            <i class="fas fa-ellipsis-v"></i>
+          </button>
+          <button class="btn btn--icon-lg shadow-sm-hover br-2 m-1">
+            <i class="fas fa-share-alt"></i>
+          </button>
+          <button class="btn btn--icon-lg shadow-sm-hover br-r m-1">
+            <i class="fas fa-ellipsis-v"></i>
+          </button>
+          <a href="#" class="btn btn--link btn--primary shadow-md-hover m-1"
+            >Primary Link</a
+          >
+          <a href="#" class="btn btn--link btn--secondary shadow-md-hover m-1"
+            >Secondary Link</a
+          >
+          <a
+            href="#"
+            class="btn btn--link btn--primary shadow-md-hover disabled m-1"
+            >Disabled Link</a
+          >
+          <button
+            class="btn btn--float btn--icon-lg btn--primary shadow-md-hover br-r"
+          >
+            <i class="fas fa-plus"></i>
+          </button>
         </div>
-      </div>
-      <!-- Inputs -->
-      <div class="container-lg p-4 shadow-lg">
-        <form action="" class="p-4 w-fit text-center shadow-md-hover mx-auto">
-          <div class="input">
-            <input type="text" class="input__field" name="name" placeholder="Enter Name" required>
-            <label class="input__float-label" for="name">Name</label>
-            <span class="input__required-text"></span>
-          </div>
-          <div class="input">
-            <input class="input__field input__field--invalid" type="email" name="email" id="email"
-              placeholder="Enter Email" required>
-            <label class="input__float-label" for="email">Email</label>
-            <span class="input__required-text"></span>
-          </div>
-          <div class="input">
-            <input class="input__field input__field--valid" type="password" name="password" id="password"
-              placeholder="Enter New Password" minlength="8" required>
-            <label class="input__float-label" for="password">Password</label>
-            <span class="input__required-text"></span>
-          </div>
-          <div class="input">
-            <input type="checkbox" class="input__field" required />
-            <span class="input__required-check"></span>
-          </div>
-          <button class="btn btn--outline-primary mt-2" type="submit">Sign Up</button>
-        </form>
-        <div class="input mt-2 mx-auto">
-          <textarea class="input__field" name="feedback" id="feedback" cols="30" rows="10"
-            placeholder="Feedback"></textarea>
-          <label class="input__float-label" for="feedback">Feedback</label>
-        </div>
-      </div>
-      <!-- Lists -->
-      <div class="container-lg p-3 shadow-sm">
-        <h3>Stacked List</h3>
-        <div class="container-sm shadow-md my-2">
-          <ul class="list-group list-group--stacked">
-            <li class="list__item">
-              <div class="avatar avatar--sm br-r">
-                <img class="avatar__img" src="/avatar/avatar_demo.png" alt="">
+        <!-- Cards -->
+        <div class="container-lg p-2 shadow-xs">
+          <h3>Cards</h3>
+          <div class="card shadow-sm m-3">
+            <div class="card__badge bg-yellow p-1">New</div>
+            <div class="card__body p-2">
+              <div class="card__img-wrapper">
+                <img
+                  class="card__img"
+                  src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1122&q=80"
+                  alt="Card Header Image"
+                  srcset=""
+                />
               </div>
-              <p class="ms-2">Tagged you in a post</p>
-              <button class="btn btn--icon br-2 ms-auto"><i class="fas fa-ellipsis-v"></i></button>
-            </li>
-            <li class="list__item">
-              <div class="avatar avatar--sm br-r">
-                <img class="avatar__img" src="/avatar/avatar_demo.png" alt="">
-              </div>
-              <p class="ms-2">Liked your post</p>
-              <button class="btn br-1 ms-auto">View Post</i></button>
-            </li>
-            <li class="list__item">
-              <div class="avatar avatar--sm br-r">
-                <img class="avatar__img" src="/avatar/avatar_demo.png" alt="">
-              </div>
-              <p class="ms-2">Sent you a friend request</p>
-              <button class="btn btn--primary br-1 ms-auto">Accept</button>
-              <button class="btn btn--outline-secondary br-1 ms-1">Reject</button>
-            </li>
-          </ul>
-        </div>
-
-        <h3>Spaced Lists</h3>
-        <div class="container-sm shadow-sm">
-          <ul class="list-group list-group--spaced">
-            <li class="list__item">Content 1</li>
-            <li class="list__item">Content 2</li>
-            <li class="list__item">Content 3</li>
-            <li class="list__item">Content 4</li>
-          </ul>
-        </div>
-        <h3>Spaced Lists with borders</h3>
-        <div class="container-sm shadow-sm">
-          <ul class="list-group list-group--spaced-box">
-            <li class="list__item">Content 1</li>
-            <li class="list__item">Content 2</li>
-            <li class="list__item">Content 3</li>
-            <li class="list__item">Content 4</li>
-          </ul>
-        </div>
-      </div>
-
-
-
-      <!-- Rating -->
-      <div class="container-lg p-3 shadow-sm">
-        <h3>Rating - Input</h3>
-        <div class="rating rating--input br-2">
-
-          <input type="radio" class="rating__star" name="rating" value="1"></input>
-
-          <input type="radio" class="rating__star" name="rating" value="2"></input>
-
-          <input type="radio" class="rating__star" name="rating" value="3"></input>
-
-          <input type="radio" class="rating__star" name="rating" value="4"></input>
-
-          <input type="radio" class="rating__star" name="rating" value="5"></input>
-        </div>
-        <h3>Rating - Display</h3>
-        <div class="rating rating--display rating--3 br-2">
-          <input type="radio" class="rating__star" name="rating" id="star-1" value="1"></input>
-
-          <input type="radio" class="rating__star" name="rating" id="star-2" value="2"></input>
-
-          <input type="radio" class="rating__star" name="rating" id="star-3" value="3"></input>
-
-          <input type="radio" class="rating__star" name="rating" id="star-4" value="4"></input>
-
-          <input type="radio" class="rating__star" name="rating" id="star-5" value="5"></input>
-        </div>
-        <div class="rating rating--display rating--4 br-2">
-          <input type="radio" class="rating__star" name="rating" id="star-1" value="1"></input>
-
-          <input type="radio" class="rating__star" name="rating" id="star-2" value="2"></input>
-
-          <input type="radio" class="rating__star" name="rating" id="star-3" value="3"></input>
-
-          <input type="radio" class="rating__star" name="rating" id="star-4" value="4"></input>
-
-          <input type="radio" class="rating__star" name="rating" id="star-5" value="5"></input>
-        </div>
-       </div>
-
-      <!-- Grids -->
-      <div class="container-lg p-3 shadow-sm test">
-        <h3>Responsive Grid</h3>
-        <div class="grid grid--r p-2">
-          <div class="bg-primary-light text-center ">Item 1</div>
-          <div class="bg-primary-light text-center ">Item 2</div>
-          <div class="bg-primary-light text-center ">Item 3</div>
-        </div>
-        <h3>2 Column Grid</h3>
-        <div class="grid grid--2 p-2">
-          <div class="bg-primary-light text-center ">Item 1</div>
-          <div class="bg-primary-light text-center ">Item 2</div>
-        </div>
-        <h3>3 Column Grid</h3>
-        <div class="grid grid--3 p-2">
-          <div class="bg-primary-light text-center ">Item 1</div>
-          <div class="bg-primary-light text-center ">Item 2</div>
-          <div class="bg-primary-light text-center ">Item 3</div>
-        </div>
-      </div>
-    
-
-      <!-- Toast-Notification -->
-      <div class="container-lg p-3 shadow-sm">
-        <button class="btn btn--primary show-toast" data-target="#example-toast1">Show Toast 1</button>
-        <button class="btn btn--primary show-toast" data-target="#example-toast2">Show Toast 2</button>
-        <div class="toast__container">
-          <div class="toast br-2" id="example-toast1">
-            <div class="toast__header p-2">
-              <h4 class="toast__title">Toast Title 1</h4>
-              <p class="toast__time text-gray text-sm ms-auto">2 seconds ago</p>
-              <div class="toast__dismiss ms-2" data-target="#example-toast1"><i class="fas fa-times-circle"></i>
+              <div class="card__text-wrapper">
+                <h3 class="card__heading heading-xs">Product Title</h3>
+                <p class="text-semi-bold text-gray">by Brand</p>
+                <p class="mt-3">Small description about product</p>
               </div>
             </div>
-            <div class="toast__body text-md p-2"> Toast description</div>
+            <div class="card__cta-wrapper p-2">
+              <button class="btn btn--primary">Buy Now</button>
+              <button class="btn btn--secondary ms-1">Add To Cart</button>
+              <button class="btn btn--icon br-2 ms-auto">
+                <i class="far fa-heart"></i>
+              </button>
+              <button class="btn btn--icon br-2">
+                <i class="fas fa-share-alt"></i>
+              </button>
+              <button class="btn btn--icon br-2">
+                <i class="fas fa-ellipsis-v"></i>
+              </button>
+            </div>
           </div>
-          <div class="toast br-1" id="example-toast2">
-            <div class="toast__header p-2">
-              <h4 class="toast__title">Toast Title 2</h4>
-              <p class="toast__time text-gray text-sm ms-auto">2 seconds ago</p>
-              <div class="toast__dismiss ms-2" data-target="#example-toast2"><i class="fas fa-times-circle"></i>
+          <div class="card shadow-sm m-3">
+            <div class="card__overlay-wrapper">
+              <p class="card__overlay-text heading-md text-bold">
+                Out Of Stock
+              </p>
+              <a class="btn btn--link" href="#">View Product</a>
+            </div>
+            <div class="card__body p-2">
+              <div class="card__img-wrapper">
+                <img
+                  class="card__img"
+                  src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1122&q=80"
+                  alt="Card Header Image"
+                  srcset=""
+                />
+              </div>
+              <div class="card__text-wrapper">
+                <h3 class="card__heading heading-xs">Product Title</h3>
+                <p class="text-semi-bold text-gray">by Brand</p>
+                <p class="mt-3">Small description about product</p>
               </div>
             </div>
-            <div class="toast__body text-md p-2"> Toast description</div>
+            <div class="card__cta-wrapper p-2">
+              <button class="btn btn--primary">Buy Now</button>
+              <button class="btn btn--secondary ms-1">Add To Cart</button>
+              <button class="btn btn--icon br-2 ms-auto">
+                <i class="far fa-heart"></i>
+              </button>
+              <button class="btn btn--icon br-2">
+                <i class="fas fa-share-alt"></i>
+              </button>
+              <button class="btn btn--icon br-2">
+                <i class="fas fa-ellipsis-v"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card shadow-sm m-3">
+            <div class="card__dismiss">
+              <i class="fas fa-times clr-white"></i>
+            </div>
+            <div class="card__body p-2">
+              <div class="card__img-wrapper">
+                <img
+                  class="card__img"
+                  src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1122&q=80"
+                  alt="Card Header Image"
+                  srcset=""
+                />
+              </div>
+              <div class="card__text-wrapper">
+                <h3 class="card__heading heading-xs">Product Title</h3>
+                <p class="text-semi-bold text-gray">by Brand</p>
+                <p class="mt-3">Small description about product</p>
+              </div>
+            </div>
+            <div class="card__cta-wrapper p-2">
+              <button class="btn btn--primary">Buy Now</button>
+              <button class="btn btn--secondary ms-1">Add To Cart</button>
+              <button class="btn btn--icon br-2 ms-auto">
+                <i class="far fa-heart"></i>
+              </button>
+              <button class="btn btn--icon br-2">
+                <i class="fas fa-share-alt"></i>
+              </button>
+              <button class="btn btn--icon br-2">
+                <i class="fas fa-ellipsis-v"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card card--text-only shadow-sm m-3">
+            <div class="card__body p-2">
+              <div class="card__img-wrapper">
+                <img
+                  class="card__img"
+                  src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1122&q=80"
+                  alt="Card Header Image"
+                  srcset=""
+                />
+              </div>
+              <div class="card__text-wrapper">
+                <h3 class="card__heading heading-xs">Product Title</h3>
+                <p class="text-semi-bold text-gray">by Brand</p>
+                <p class="mt-3">Small description about product</p>
+              </div>
+            </div>
+            <div class="card__cta-wrapper p-2">
+              <button class="btn btn--primary">Buy Now</button>
+              <button class="btn btn--secondary ms-1">Add To Cart</button>
+              <button class="btn btn--icon br-2 ms-auto">
+                <i class="far fa-heart"></i>
+              </button>
+              <button class="btn btn--icon br-2">
+                <i class="fas fa-share-alt"></i>
+              </button>
+              <button class="btn btn--icon br-2">
+                <i class="fas fa-ellipsis-v"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card card--hz shadow-sm m-3">
+            <div class="card__body p-2">
+              <div class="card__img-wrapper">
+                <img
+                  class="card__img"
+                  src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1122&q=80"
+                  alt="Card Header Image"
+                  srcset=""
+                />
+              </div>
+              <div class="card__text-wrapper ps-2">
+                <h3 class="card__heading heading-xs">Product Title</h3>
+                <p class="text-semi-bold text-gray">by Brand</p>
+                <p class="mt-3">Small description about product</p>
+              </div>
+            </div>
+            <div class="card__cta-wrapper p-2">
+              <button class="btn btn--primary">Buy Now</button>
+              <button class="btn btn--secondary ms-1">Add To Cart</button>
+              <button class="btn btn--icon br-2 ms-auto">
+                <i class="far fa-heart"></i>
+              </button>
+              <button class="btn btn--icon br-2">
+                <i class="fas fa-share-alt"></i>
+              </button>
+              <button class="btn btn--icon br-2">
+                <i class="fas fa-ellipsis-v"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Images -->
+        <div class="container-lg p-3 shadow-lg">
+          <h3 class="mb-2">Responsive Image</h3>
+          <img
+            class="img-responsive"
+            src="./images/image-demo.jpg"
+            alt="Roads"
+          />
+          <div class="container-sm p-3 shadow-lg">
+            <h2 class="mb-2">Round Image</h2>
+            <img
+              class="img-responsive ar-1-1 br-r"
+              src="./images/image-demo.jpg"
+              alt="Roads"
+            />
+          </div>
+          <div class="container-sm p-3 shadow-lg">
+            <h3 class="mb-2">Fixed Aspect Ratio - 1:1</h3>
+            <img
+              class="img-responsive ar-1-1"
+              src="./images/image-demo.jpg"
+              alt="Roads"
+            />
+            <h3 class="mb-2">Fixed Aspect Ratio - 4:3</h3>
+            <img
+              class="img-responsive ar-4-3"
+              src="./images/image-demo.jpg"
+              alt="Roads"
+            />
+            <h3 class="mb-2">Fixed Aspect Ratio - 16:9</h3>
+            <img
+              class="img-responsive ar-16-9"
+              src="./images/image-demo.jpg"
+              alt="Roads"
+            />
+          </div>
+        </div>
+        <!-- Inputs -->
+        <div class="container-lg p-4 shadow-lg">
+          <form action="" class="p-4 w-fit text-center shadow-md-hover mx-auto">
+            <div class="input">
+              <input
+                type="text"
+                class="input__field"
+                name="name"
+                placeholder="Enter Name"
+                required
+              />
+              <label class="input__float-label" for="name">Name</label>
+              <span class="input__required-text"></span>
+            </div>
+            <div class="input">
+              <input
+                class="input__field input__field--invalid"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter Email"
+                required
+              />
+              <label class="input__float-label" for="email">Email</label>
+              <span class="input__required-text"></span>
+            </div>
+            <div class="input">
+              <input
+                class="input__field input__field--valid"
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Enter New Password"
+                minlength="8"
+                required
+              />
+              <label class="input__float-label" for="password">Password</label>
+              <span class="input__required-text"></span>
+            </div>
+            <div class="input">
+              <input type="checkbox" class="input__field" required />
+              <span class="input__required-check"></span>
+            </div>
+            <button class="btn btn--outline-primary mt-2" type="submit">
+              Sign Up
+            </button>
+          </form>
+          <div class="input mt-2 mx-auto">
+            <textarea
+              class="input__field"
+              name="feedback"
+              id="feedback"
+              cols="30"
+              rows="10"
+              placeholder="Feedback"
+            ></textarea>
+            <label class="input__float-label" for="feedback">Feedback</label>
+          </div>
+        </div>
+        <!-- Lists -->
+        <div class="container-lg p-3 shadow-sm">
+          <h3>Stacked List</h3>
+          <div class="container-sm shadow-md my-2">
+            <ul class="list-group list-group--stacked">
+              <li class="list__item">
+                <div class="avatar avatar--sm br-r">
+                  <img
+                    class="avatar__img"
+                    src="/avatar/avatar_demo.png"
+                    alt=""
+                  />
+                </div>
+                <p class="ms-2">Tagged you in a post</p>
+                <button class="btn btn--icon br-2 ms-auto">
+                  <i class="fas fa-ellipsis-v"></i>
+                </button>
+              </li>
+              <li class="list__item">
+                <div class="avatar avatar--sm br-r">
+                  <img
+                    class="avatar__img"
+                    src="/avatar/avatar_demo.png"
+                    alt=""
+                  />
+                </div>
+                <p class="ms-2">Liked your post</p>
+                <button class="btn br-1 ms-auto">View Post</button>
+              </li>
+              <li class="list__item">
+                <div class="avatar avatar--sm br-r">
+                  <img
+                    class="avatar__img"
+                    src="/avatar/avatar_demo.png"
+                    alt=""
+                  />
+                </div>
+                <p class="ms-2">Sent you a friend request</p>
+                <button class="btn btn--primary br-1 ms-auto">Accept</button>
+                <button class="btn btn--outline-secondary br-1 ms-1">
+                  Reject
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <h3>Spaced Lists</h3>
+          <div class="container-sm shadow-sm">
+            <ul class="list-group list-group--spaced">
+              <li class="list__item">Content 1</li>
+              <li class="list__item">Content 2</li>
+              <li class="list__item">Content 3</li>
+              <li class="list__item">Content 4</li>
+            </ul>
+          </div>
+          <h3>Spaced Lists with borders</h3>
+          <div class="container-sm shadow-sm">
+            <ul class="list-group list-group--spaced-box">
+              <li class="list__item">Content 1</li>
+              <li class="list__item">Content 2</li>
+              <li class="list__item">Content 3</li>
+              <li class="list__item">Content 4</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Rating -->
+        <div class="container-lg p-3 shadow-sm">
+          <h3>Rating - Input</h3>
+          <div class="rating rating--input br-2">
+            <input type="radio" class="rating__star" name="rating" value="1" />
+
+            <input type="radio" class="rating__star" name="rating" value="2" />
+
+            <input type="radio" class="rating__star" name="rating" value="3" />
+
+            <input type="radio" class="rating__star" name="rating" value="4" />
+
+            <input type="radio" class="rating__star" name="rating" value="5" />
+          </div>
+          <h3>Rating - Display</h3>
+          <div class="rating rating--display rating--3 br-2">
+            <input
+              type="radio"
+              class="rating__star"
+              name="rating"
+              id="star-1"
+              value="1"
+            />
+
+            <input
+              type="radio"
+              class="rating__star"
+              name="rating"
+              id="star-2"
+              value="2"
+            />
+
+            <input
+              type="radio"
+              class="rating__star"
+              name="rating"
+              id="star-3"
+              value="3"
+            />
+
+            <input
+              type="radio"
+              class="rating__star"
+              name="rating"
+              id="star-4"
+              value="4"
+            />
+
+            <input
+              type="radio"
+              class="rating__star"
+              name="rating"
+              id="star-5"
+              value="5"
+            />
+          </div>
+          <div class="rating rating--display rating--4 br-2">
+            <input
+              type="radio"
+              class="rating__star"
+              name="rating"
+              id="star-1"
+              value="1"
+            />
+
+            <input
+              type="radio"
+              class="rating__star"
+              name="rating"
+              id="star-2"
+              value="2"
+            />
+
+            <input
+              type="radio"
+              class="rating__star"
+              name="rating"
+              id="star-3"
+              value="3"
+            />
+
+            <input
+              type="radio"
+              class="rating__star"
+              name="rating"
+              id="star-4"
+              value="4"
+            />
+
+            <input
+              type="radio"
+              class="rating__star"
+              name="rating"
+              id="star-5"
+              value="5"
+            />
+          </div>
+        </div>
+
+        <!-- Grids -->
+        <div class="container-lg p-3 shadow-sm test">
+          <h3>Responsive Grid</h3>
+          <div class="grid grid--r p-2">
+            <div class="bg-primary-light text-center">Item 1</div>
+            <div class="bg-primary-light text-center">Item 2</div>
+            <div class="bg-primary-light text-center">Item 3</div>
+          </div>
+          <h3>2 Column Grid</h3>
+          <div class="grid grid--2 p-2">
+            <div class="bg-primary-light text-center">Item 1</div>
+            <div class="bg-primary-light text-center">Item 2</div>
+          </div>
+          <h3>3 Column Grid</h3>
+          <div class="grid grid--3 p-2">
+            <div class="bg-primary-light text-center">Item 1</div>
+            <div class="bg-primary-light text-center">Item 2</div>
+            <div class="bg-primary-light text-center">Item 3</div>
+          </div>
+        </div>
+
+        <!-- Toast-Notification -->
+        <div class="container-lg p-3 shadow-sm">
+          <button
+            class="btn btn--primary show-toast"
+            data-target="#example-toast1"
+          >
+            Show Toast 1
+          </button>
+          <button
+            class="btn btn--primary show-toast"
+            data-target="#example-toast2"
+          >
+            Show Toast 2
+          </button>
+          <div class="toast__container">
+            <div class="toast br-2" id="example-toast1">
+              <div class="toast__header p-2">
+                <h4 class="toast__title">Toast Title 1</h4>
+                <p class="toast__time text-gray text-sm ms-auto">
+                  2 seconds ago
+                </p>
+                <div class="toast__dismiss ms-2" data-target="#example-toast1">
+                  <i class="fas fa-times-circle"></i>
+                </div>
+              </div>
+              <div class="toast__body text-md p-2">Toast description</div>
+            </div>
+            <div class="toast br-1" id="example-toast2">
+              <div class="toast__header p-2">
+                <h4 class="toast__title">Toast Title 2</h4>
+                <p class="toast__time text-gray text-sm ms-auto">
+                  2 seconds ago
+                </p>
+                <div class="toast__dismiss ms-2" data-target="#example-toast2">
+                  <i class="fas fa-times-circle"></i>
+                </div>
+              </div>
+              <div class="toast__body text-md p-2">Toast description</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="container-lg p-3 shadow-sm">
+          <button
+            class="btn btn--primary show-modal"
+            data-target="#example-modal"
+          >
+            Show Modal
+          </button>
+
+          <div class="modal" id="example-modal">
+            <div class="modal__body bg-white br-2">
+              <div class="modal__header p-3">
+                <h2 class="modal__title">Modal Title</h2>
+                <button
+                  class="modal__dismiss btn btn--icon dismiss"
+                  data-target="#example-modal"
+                >
+                  <i class="fas fa-times"></i><i class="fas fa-dismiss"></i>
+                </button>
+              </div>
+
+              <p class="modal__text p-3">Modal body text</p>
+              <div class="modal__cta-wrapper p-3 mt-auto text-end">
+                <button
+                  class="btn br-1 me-2 dismiss"
+                  data-target="#example-modal"
+                >
+                  Dismiss
+                </button>
+                <button class="btn btn--primary br-1">SAVE</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    
-    
-    <!-- Modal -->
-      <div class="container-lg p-3 shadow-sm">
-        <button class="btn btn--primary show-modal" data-target="#example-modal">Show Modal</button>
 
-        <div class="modal" id="example-modal">
-          <div class="modal__body bg-white br-2">
-            <div class="modal__header p-3">
-              <h2 class="modal__title">Modal Title</h2>
-              <button class="modal__dismiss btn btn--icon dismiss" data-target="#example-modal"><i
-                  class="fas fa-times"></i><i class="fas fa-dismiss"></i></button>
-            </div>
-
-            <p class="modal__text p-3">Modal body text</p>
-            <div class="modal__cta-wrapper p-3 mt-auto text-end">
-              <button class="btn br-1 me-2 dismiss" data-target="#example-modal">Dismiss</button>
-              <button class="btn btn--primary br-1">SAVE</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <script src="index.js"></script>
-  </main>
-</body>
-
+      <script src="index.js"></script>
+    </main>
+  </body>
 </html>
