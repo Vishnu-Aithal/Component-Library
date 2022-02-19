@@ -142,6 +142,12 @@
   color: inherit;
 }
 
+.side-bar__link.side-bar__link--active {
+  background-color: var(--color-black-light);
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
 .side-bar__toggle {
   display: none;
 }
