@@ -9,6 +9,8 @@
 @import url(/navigation/navigation.css);
 @import url(/lists/list.css);
 @import url(/toast/toast.css);
+@import url(/rating/rating.css);
+
 
 main {
   display: grid;
