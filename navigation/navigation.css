@@ -217,7 +217,7 @@
     z-index: 999;
     transform: translateY(100%);
     overflow-y: visible;
-    max-height: 80vw;
+    max-height: 50vh;
   }
 
   .side-bar__menu {
