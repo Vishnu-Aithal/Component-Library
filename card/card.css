@@ -77,6 +77,18 @@
   pointer-events: none;
 }
 
+.card__quantity {
+  border: solid 2px var(--color-black-light);
+  display: flex;
+  align-items: center;
+}
+
+.card__item-count {
+  padding: 0.5rem;
+  border-right: solid 2px var(--color-black-light);
+  border-left: solid 2px var(--color-black-light);
+}
+
 .card--text-only .card__img-wrapper {
   display: none;
 }
