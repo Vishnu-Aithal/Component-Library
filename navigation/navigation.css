@@ -148,10 +148,16 @@
 
 .side-bar__toggle {
   display: none;
+  background-color: var(--color-primary);
 }
 
 .side-bar__toggle i {
   transition: all 0.3s ease;
+  color: white;
+}
+
+.side-bar__toggle:hover i {
+  color: var(--color-primary);
 }
 .side-bar__toggle.active i {
   transform: rotate(180deg);
@@ -253,7 +259,6 @@
     left: 0;
     width: 100%;
     clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 100% 100%, 0% 100%);
-    background-color: white;
     z-index: 999;
   }
 
