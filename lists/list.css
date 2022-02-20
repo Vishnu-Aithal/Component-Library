@@ -1,5 +1,3 @@
-@import url(/style.css);
-
 .list-group {
   display: flex;
   flex-direction: column;
