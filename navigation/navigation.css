@@ -62,7 +62,7 @@
   pointer-events: none;
 }
 
-.nav-bar__link--active.active {
+.nav-bar__link--active {
   position: relative;
 }
 
