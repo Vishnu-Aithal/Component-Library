@@ -11,6 +11,7 @@
   object-fit: cover;
   height: 100%;
   width: 100%;
+  max-height: 200px;
   cursor: pointer;
 }
 
@@ -86,4 +87,8 @@
 
 .card--hz .card__img-wrapper {
   width: 150px;
+}
+
+.card--hz .card__img {
+  max-height: 100px;
 }
