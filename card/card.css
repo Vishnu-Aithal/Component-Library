@@ -7,6 +7,10 @@
   border: solid 0.5px var(--color-black-light);
 }
 
+.card__img-wrapper {
+  height: 300px;
+}
+
 .card__img {
   object-fit: cover;
   height: 100%;
@@ -99,6 +103,7 @@
 
 .card--hz .card__img-wrapper {
   width: 150px;
+  height: 100px;
 }
 
 .card--hz .card__img {
