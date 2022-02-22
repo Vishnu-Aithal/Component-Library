@@ -1,0 +1,10 @@
+slider {
+  width: 100%;
+}
+
+.slider__label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.6rem;
+  width: 100%;
+}
