@@ -1,0 +1,44 @@
+.p-relative {
+    position: relative;
+}
+
+.p-absolute {
+    position: absolute;
+}
+
+.p-sticky {
+    position: static;
+}
+
+.p-fixed {
+    position: fixed;
+}
+
+.p-center {
+    top: 50%;
+    left: 50%;
+}
+
+.p-top-right {
+    top: 0;
+    right: 0;
+}
+
+.p-top-left {
+    top: 0;
+    left: 0;
+}
+
+.p-bottom-right {
+    bottom: 0;
+    right: 0;
+}
+
+.p-bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+.transform-center {
+    transform: translate(-50%, -50%);
+}
