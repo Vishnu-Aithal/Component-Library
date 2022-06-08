@@ -1,0 +1,20 @@
+{
+    "name": "component-library",
+    "version": "1.0.0",
+    "description": "This is the Repository for Components in https://some-ui.netlify.app",
+    "main": "index.js",
+    "scripts": {
+        "build": "parcel-css --minify --bundle input.css -o export.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Vishnu-Aithal/Component-Library.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Vishnu-Aithal/Component-Library/issues"
+    },
+    "homepage": "https://github.com/Vishnu-Aithal/Component-Library#readme"
+}
